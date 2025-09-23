@@ -97,6 +97,12 @@ Examples:
         help="Generate summary report"
     )
 
+    parser.add_argument(
+        "--aggregate",
+        action="store_true",
+        help="Generate personal data aggregation across all documents"
+    )
+
     args = parser.parse_args()
 
     # Setup logging
@@ -223,6 +229,27 @@ Examples:
             print(f"  Documents processed: {overall_summary['total_documents_processed']}")
             print(f"  Extraction types found: {', '.join(overall_summary['extraction_types_found'])}")
             print(f"  Overall average confidence: {overall_summary['overall_average_confidence']:.1%}")
+
+        # Generate personal data aggregation if requested
+        if args.aggregate:
+            logger.info("Creating personal data aggregation...")
+            aggregation_data = output_manager.create_personal_data_aggregation(all_results)
+            aggregation_file = output_manager.save_personal_data_aggregation(aggregation_data, "personal_data_aggregation.json")
+            print(f"📋 Personal data aggregation saved to: {aggregation_file}")
+
+            # Print aggregation insights
+            summary = aggregation_data["summary"]
+            print(f"\n📊 Personal Data Aggregation Summary:")
+            print(f"  Fields with data: {summary['fields_with_data']}")
+            print(f"  Total unique values: {summary['total_unique_values']}")
+
+            if summary["inconsistencies_found"]:
+                print(f"  ⚠️  Inconsistencies found in {len(summary['inconsistencies_found'])} fields:")
+                for inconsistency in summary["inconsistencies_found"][:3]:  # Show top 3
+                    values_str = ", ".join([f'"{v}"' for v in inconsistency["values"]])
+                    print(f"    • {inconsistency['field']}: {inconsistency['value_count']} different values ({values_str})")
+            else:
+                print("  ✅ No inconsistencies detected")
 
         total_extractions = sum(len(results.get('extraction_metadata', {}).get('extractors_run', [])) for results in all_results.values())
         print(f"\n🎉 Processing complete! {total_extractions} total extractions performed across all documents.")

@@ -107,7 +107,7 @@ if __name__ == "__main__":
 
         print("\nTo run with real data:")
         print("1. Set ANTHROPIC_API_KEY environment variable")
-        print("2. Run: python main.py --input-dir data/input --summary")
+        print("2. Run: python3 main.py --input-dir data/input --summary")
     else:
         print("❌ Some tests failed. Please check the code.")
         sys.exit(1)

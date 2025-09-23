@@ -1,7 +1,7 @@
 {
   "extraction_summary": {
     "total_files_processed": 1,
-    "processed_at": "2025-09-23T15:11:39.514885",
+    "processed_at": "2025-09-23T15:43:01.787105",
     "extraction_types": [
       "personalData",
       "tabularData",
@@ -24,6 +24,14 @@
     {
       "homeAddress": "432 Elm St, Othertown, USA 67890",
       "confidence": 0.8
+    },
+    {
+      "employmentStatus": "Employed",
+      "confidence": 0.7
+    },
+    {
+      "annualIncome": "$1,500.00",
+      "confidence": 0.7
     }
   ],
   "tabularData": [
@@ -126,26 +134,26 @@
   ],
   "extraction_metadata": {
     "filename": "Bank Statement 2.docx",
-    "processed_at": "2025-09-23T15:11:01.128777",
+    "processed_at": "2025-09-23T15:42:23.259931",
     "extractors_run": [
       {
         "name": "personal_data_extractor",
         "type": "personal_data",
         "success": true,
-        "processing_time": 2.896577,
-        "confidence": 0.2833333333333334
+        "processing_time": 2.74535,
+        "confidence": 0.39999999999999997
       },
       {
         "name": "tabular_data_extractor",
         "type": "tabular_data",
         "success": true,
-        "processing_time": 3.098426,
+        "processing_time": 2.974347,
         "confidence": 0.925
       }
     ],
-    "total_processing_time": 5.995806,
+    "total_processing_time": 5.720206,
     "success_count": 2,
     "error_count": 0,
-    "completed_at": "2025-09-23T15:11:07.124588"
+    "completed_at": "2025-09-23T15:42:28.980143"
   }
 }

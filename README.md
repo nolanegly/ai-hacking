@@ -42,25 +42,26 @@ export ANTHROPIC_API_KEY="your-api-key-here"
 1. Place your documents in an input directory (e.g., `data/input/`)
 2. Run the extraction agent:
 ```bash
-python main.py --input-dir data/input --output-dir data/output
+python3 main.py --input-dir data/input --output-dir data/output
 ```
 
 ## Usage
 
 ### Basic Usage
 ```bash
-python main.py --input-dir ./documents
+python3 main.py --input-dir ./documents
 ```
 
 ### Advanced Usage
 ```bash
-python main.py \
+python3 main.py \
     --input-dir ./documents \
     --output-dir ./results \
     --output-file personal_data.json \
     --include-metadata \
     --validate \
     --summary \
+    --aggregate \
     --verbose
 ```
 
@@ -74,6 +75,7 @@ python main.py \
 - `--include-metadata`: Include extraction metadata in output
 - `--validate`: Generate validation report
 - `--summary`: Generate comprehensive summary report
+- `--aggregate`: Generate personal data aggregation across all documents
 - `--verbose, -v`: Enable verbose logging
 
 ## Extracted Fields
@@ -190,6 +192,94 @@ The tabular data extractor automatically classifies tables into types such as:
 - `contact_list` - Names, phones, emails
 - `employment_history` - Work experience
 - And more...
+
+## Personal Data Aggregation
+
+The `--aggregate` flag generates a comprehensive cross-document analysis that identifies all values found for each personal data field and tracks which documents they appeared in. This is valuable for:
+
+- **Inconsistency Detection**: Identifies when different documents contain different values for the same person
+- **Data Validation**: Helps verify information accuracy across multiple sources
+- **Completeness Assessment**: Shows which fields have data and which are missing
+
+### Aggregation Output Format
+
+```json
+{
+  "aggregated_personal_data": {
+    "firstName": [
+      {
+        "value": "John",
+        "instances": [
+          {"file": "document1.pdf", "confidence": 0.9},
+          {"file": "document2.txt", "confidence": 0.95}
+        ],
+        "occurrences": 2,
+        "averageConfidence": 0.925
+      },
+      {
+        "value": "Jane",
+        "instances": [
+          {"file": "bank_statement.docx", "confidence": 0.92}
+        ],
+        "occurrences": 1,
+        "averageConfidence": 0.92
+      }
+    ],
+    "phoneNumber": [
+      {
+        "value": "(555) 123-4567",
+        "instances": [
+          {"file": "document1.pdf", "confidence": 0.85}
+        ],
+        "occurrences": 1,
+        "averageConfidence": 0.85
+      },
+      {
+        "value": "(555) 987-6543",
+        "instances": [
+          {"file": "document2.txt", "confidence": 0.9}
+        ],
+        "occurrences": 1,
+        "averageConfidence": 0.9
+      }
+    ]
+  },
+  "summary": {
+    "fields_with_data": 5,
+    "total_unique_values": 8,
+    "inconsistencies_found": [
+      {
+        "field": "firstName",
+        "value_count": 2,
+        "values": ["John", "Jane"]
+      },
+      {
+        "field": "phoneNumber",
+        "value_count": 2,
+        "values": ["(555) 123-4567", "(555) 987-6543"]
+      }
+    ],
+    "most_common_values": {
+      "firstName": {"value": "John", "occurrences": 2, "confidence": 0.925}
+    }
+  }
+}
+```
+
+### Usage Example
+
+```bash
+# Process multiple documents and generate aggregation
+python3 main.py --input-dir ./loan_documents --aggregate
+
+# Console output will show:
+# 📊 Personal Data Aggregation Summary:
+#   Fields with data: 5
+#   Total unique values: 8
+#   ⚠️  Inconsistencies found in 2 fields:
+#     • firstName: 2 different values ("John", "Jane")
+#     • phoneNumber: 2 different values ("(555) 123-4567", "(555) 987-6543")
+```
 
 ## Architecture
 

@@ -1,7 +1,7 @@
 {
   "extraction_summary": {
     "total_files_processed": 1,
-    "processed_at": "2025-09-23T15:43:01.790778",
+    "processed_at": "2025-09-23T15:11:39.518429",
     "extraction_types": [
       "personalData",
       "extraction_metadata"
@@ -9,37 +9,37 @@
   },
   "personalData": [
     {
-      "firstName": "Jane",
+      "firstName": "John",
       "confidence": 0.9
     },
     {
-      "lastName": "Smith",
+      "lastName": "Doe",
       "confidence": 0.9
     },
     {
-      "phoneNumber": "(555) 987-6543",
-      "confidence": 0.8
+      "phoneNumber": "(555) 123-4567",
+      "confidence": 0.9
     },
     {
-      "homeAddress": "456 Elm St, Other town, USA 67890",
+      "homeAddress": "123 Main St, Anytown, USA 12345",
       "confidence": 0.8
     }
   ],
   "extraction_metadata": {
-    "filename": "Bank Statement 2.pdf",
-    "processed_at": "2025-09-23T15:42:56.126955",
+    "filename": "Bank Statement 1.pdf",
+    "processed_at": "2025-09-23T15:11:35.794966",
     "extractors_run": [
       {
         "name": "personal_data_extractor",
         "type": "personal_data",
         "success": true,
-        "processing_time": 2.943721,
-        "confidence": 0.2833333333333334
+        "processing_time": 3.714226,
+        "confidence": 0.2916666666666667
       }
     ],
-    "total_processing_time": 2.944263,
+    "total_processing_time": 3.714869,
     "success_count": 1,
     "error_count": 0,
-    "completed_at": "2025-09-23T15:42:59.071223"
+    "completed_at": "2025-09-23T15:11:39.509846"
   }
 }

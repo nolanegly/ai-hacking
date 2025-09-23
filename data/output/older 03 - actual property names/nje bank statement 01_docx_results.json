@@ -1,7 +1,7 @@
 {
   "extraction_summary": {
     "total_files_processed": 1,
-    "processed_at": "2025-09-23T15:43:01.789826",
+    "processed_at": "2025-09-23T15:11:39.517290",
     "extraction_types": [
       "personalData",
       "extraction_metadata"
@@ -35,19 +35,19 @@
   ],
   "extraction_metadata": {
     "filename": "nje bank statement 01.docx",
-    "processed_at": "2025-09-23T15:42:46.966703",
+    "processed_at": "2025-09-23T15:11:23.885224",
     "extractors_run": [
       {
         "name": "personal_data_extractor",
         "type": "personal_data",
         "success": true,
-        "processing_time": 2.217036,
+        "processing_time": 2.052986,
         "confidence": 0.44166666666666665
       }
     ],
-    "total_processing_time": 2.217536,
+    "total_processing_time": 2.053475,
     "success_count": 1,
     "error_count": 0,
-    "completed_at": "2025-09-23T15:42:49.184245"
+    "completed_at": "2025-09-23T15:11:25.938705"
   }
 }

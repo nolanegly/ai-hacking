@@ -54,7 +54,7 @@ if __name__ == "__main__":
         print("\nTo run the full extraction:")
         print("1. Set ANTHROPIC_API_KEY environment variable")
         print("2. Place documents in data/input/ directory")
-        print("3. Run: python main.py --input-dir data/input")
+        print("3. Run: python3 main.py --input-dir data/input")
     else:
         print("\n❌ Some tests failed. Please check the code.")
         sys.exit(1)

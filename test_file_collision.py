@@ -79,7 +79,7 @@ if __name__ == "__main__":
 
         print("\nTo test with real extraction:")
         print("1. Set ANTHROPIC_API_KEY environment variable")
-        print("2. Run: python main.py --input-dir data/input")
+        print("2. Run: python3 main.py --input-dir data/input")
         print("3. Check that both files generate separate outputs")
     else:
         print("❌ Some tests failed.")

@@ -1,18 +1,18 @@
 {
   "extraction_summary": {
     "total_files_processed": 1,
-    "processed_at": "2025-09-23T15:43:01.786619",
+    "processed_at": "2025-09-23T15:11:39.514315",
     "extraction_types": [
       "extraction_metadata"
     ]
   },
   "extraction_metadata": {
     "filename": "New Firm Application Sample_PAWNEE LAW FIRM PC - 2024.pdf",
-    "processed_at": "2025-09-23T15:42:23.256928",
+    "processed_at": "2025-09-23T15:11:01.126101",
     "extractors_run": [],
-    "total_processing_time": 0.002851,
+    "total_processing_time": 0.002333,
     "success_count": 0,
     "error_count": 0,
-    "completed_at": "2025-09-23T15:42:23.259784"
+    "completed_at": "2025-09-23T15:11:01.128439"
   }
 }

@@ -1,7 +1,7 @@
 {
   "extraction_summary": {
     "total_files_processed": 1,
-    "processed_at": "2025-09-23T15:43:01.783531",
+    "processed_at": "2025-09-23T15:11:39.512052",
     "extraction_types": [
       "personalData",
       "tabularData",
@@ -126,26 +126,26 @@
   ],
   "extraction_metadata": {
     "filename": "Bank Statement 2a.docx",
-    "processed_at": "2025-09-23T15:42:13.396583",
+    "processed_at": "2025-09-23T15:10:51.078018",
     "extractors_run": [
       {
         "name": "personal_data_extractor",
         "type": "personal_data",
         "success": true,
-        "processing_time": 2.654296,
+        "processing_time": 2.688632,
         "confidence": 0.2833333333333334
       },
       {
         "name": "tabular_data_extractor",
         "type": "tabular_data",
         "success": true,
-        "processing_time": 2.926398,
+        "processing_time": 3.039718,
         "confidence": 0.925
       }
     ],
-    "total_processing_time": 5.581128,
+    "total_processing_time": 5.728719,
     "success_count": 2,
     "error_count": 0,
-    "completed_at": "2025-09-23T15:42:18.977730"
+    "completed_at": "2025-09-23T15:10:56.806746"
   }
 }

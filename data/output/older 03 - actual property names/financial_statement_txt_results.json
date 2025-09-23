@@ -1,7 +1,7 @@
 {
   "extraction_summary": {
     "total_files_processed": 1,
-    "processed_at": "2025-09-23T15:43:01.788797",
+    "processed_at": "2025-09-23T15:11:39.516130",
     "extraction_types": [
       "personalData",
       "tabularData",
@@ -95,7 +95,7 @@
         ]
       ],
       "confidence": 0.95,
-      "description": "List of personal assets",
+      "description": "List of assets",
       "table_id": "table_1",
       "row_count": 6,
       "column_count": 3
@@ -137,7 +137,7 @@
         ]
       ],
       "confidence": 0.92,
-      "description": "Monthly personal expenses",
+      "description": "Monthly expenses",
       "table_id": "table_2",
       "row_count": 7,
       "column_count": 2
@@ -171,7 +171,7 @@
         ]
       ],
       "confidence": 0.93,
-      "description": "List of personal liabilities",
+      "description": "Credit accounts and loans",
       "table_id": "table_3",
       "row_count": 3,
       "column_count": 4
@@ -201,7 +201,7 @@
         ]
       ],
       "confidence": 0.9,
-      "description": "List of personal references",
+      "description": "References",
       "table_id": "table_4",
       "row_count": 3,
       "column_count": 3
@@ -227,7 +227,7 @@
         ]
       ],
       "confidence": 0.98,
-      "description": "Applicant personal information",
+      "description": "Applicant information",
       "table_id": "table_5",
       "row_count": 1,
       "column_count": 6
@@ -249,7 +249,7 @@
         ]
       ],
       "confidence": 0.95,
-      "description": "Applicant employment details",
+      "description": "Employment details",
       "table_id": "table_6",
       "row_count": 1,
       "column_count": 4
@@ -257,26 +257,26 @@
   ],
   "extraction_metadata": {
     "filename": "financial_statement.txt",
-    "processed_at": "2025-09-23T15:42:38.244763",
+    "processed_at": "2025-09-23T15:11:14.496017",
     "extractors_run": [
       {
         "name": "personal_data_extractor",
         "type": "personal_data",
         "success": true,
-        "processing_time": 2.916889,
+        "processing_time": 2.734686,
         "confidence": 0.9166666666666666
       },
       {
         "name": "tabular_data_extractor",
         "type": "tabular_data",
         "success": true,
-        "processing_time": 5.804013,
+        "processing_time": 6.653139,
         "confidence": 0.9383333333333334
       }
     ],
-    "total_processing_time": 8.721653,
+    "total_processing_time": 9.388691,
     "success_count": 2,
     "error_count": 0,
-    "completed_at": "2025-09-23T15:42:46.966421"
+    "completed_at": "2025-09-23T15:11:23.884716"
   }
 }

@@ -6,7 +6,7 @@
     "tabularData"
   ],
   "average_confidence_by_type": {
-    "personalData": 0.445,
+    "personalData": 0.4333333333333334,
     "tabularData": 0.9313888888888889
   },
   "document_summaries": {
@@ -14,7 +14,7 @@
       "total_extractors": 0,
       "successful_extractors": 0,
       "failed_extractors": 0,
-      "processing_time": 0.000136,
+      "processing_time": 9.2e-05,
       "extraction_types_found": [],
       "average_confidence": 0.0
     },
@@ -22,7 +22,7 @@
       "total_extractors": 2,
       "successful_extractors": 2,
       "failed_extractors": 0,
-      "processing_time": 5.581128,
+      "processing_time": 5.728719,
       "extraction_types_found": [
         "personalData",
         "tabularData"
@@ -33,7 +33,7 @@
       "total_extractors": 2,
       "successful_extractors": 2,
       "failed_extractors": 0,
-      "processing_time": 4.278636,
+      "processing_time": 4.318633,
       "extraction_types_found": [
         "personalData",
         "tabularData"
@@ -44,7 +44,7 @@
       "total_extractors": 0,
       "successful_extractors": 0,
       "failed_extractors": 0,
-      "processing_time": 0.002851,
+      "processing_time": 0.002333,
       "extraction_types_found": [],
       "average_confidence": 0.0
     },
@@ -52,18 +52,18 @@
       "total_extractors": 2,
       "successful_extractors": 2,
       "failed_extractors": 0,
-      "processing_time": 5.720206,
+      "processing_time": 5.995806,
       "extraction_types_found": [
         "personalData",
         "tabularData"
       ],
-      "average_confidence": 0.6625
+      "average_confidence": 0.6041666666666667
     },
     "sample_application.txt": {
       "total_extractors": 1,
       "successful_extractors": 1,
       "failed_extractors": 0,
-      "processing_time": 3.036539,
+      "processing_time": 2.709237,
       "extraction_types_found": [
         "personalData"
       ],
@@ -73,7 +73,7 @@
       "total_extractors": 2,
       "successful_extractors": 2,
       "failed_extractors": 0,
-      "processing_time": 6.226608,
+      "processing_time": 4.66104,
       "extraction_types_found": [
         "personalData",
         "tabularData"
@@ -84,7 +84,7 @@
       "total_extractors": 2,
       "successful_extractors": 2,
       "failed_extractors": 0,
-      "processing_time": 8.721653,
+      "processing_time": 9.388691,
       "extraction_types_found": [
         "personalData",
         "tabularData"
@@ -95,7 +95,7 @@
       "total_extractors": 1,
       "successful_extractors": 1,
       "failed_extractors": 0,
-      "processing_time": 2.217536,
+      "processing_time": 2.053475,
       "extraction_types_found": [
         "personalData"
       ],
@@ -105,7 +105,7 @@
       "total_extractors": 2,
       "successful_extractors": 2,
       "failed_extractors": 0,
-      "processing_time": 6.942018,
+      "processing_time": 6.557828,
       "extraction_types_found": [
         "personalData",
         "tabularData"
@@ -116,7 +116,7 @@
       "total_extractors": 1,
       "successful_extractors": 1,
       "failed_extractors": 0,
-      "processing_time": 2.944263,
+      "processing_time": 3.296858,
       "extraction_types_found": [
         "personalData"
       ],
@@ -126,12 +126,12 @@
       "total_extractors": 1,
       "successful_extractors": 1,
       "failed_extractors": 0,
-      "processing_time": 2.710286,
+      "processing_time": 3.714869,
       "extraction_types_found": [
         "personalData"
       ],
       "average_confidence": 0.2916666666666667
     }
   },
-  "overall_average_confidence": 0.6273958333333334
+  "overall_average_confidence": 0.6201041666666667
 }

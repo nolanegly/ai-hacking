@@ -1,7 +1,7 @@
 {
   "extraction_summary": {
     "total_files_processed": 1,
-    "processed_at": "2025-09-23T15:43:01.788028",
+    "processed_at": "2025-09-23T15:11:39.515363",
     "extraction_types": [
       "personalData",
       "extraction_metadata"
@@ -59,19 +59,19 @@
   ],
   "extraction_metadata": {
     "filename": "sample_application.txt",
-    "processed_at": "2025-09-23T15:42:28.980678",
+    "processed_at": "2025-09-23T15:11:07.125110",
     "extractors_run": [
       {
         "name": "personal_data_extractor",
         "type": "personal_data",
         "success": true,
-        "processing_time": 3.035712,
+        "processing_time": 2.708882,
         "confidence": 0.8916666666666667
       }
     ],
-    "total_processing_time": 3.036539,
+    "total_processing_time": 2.709237,
     "success_count": 1,
     "error_count": 0,
-    "completed_at": "2025-09-23T15:42:32.017222"
+    "completed_at": "2025-09-23T15:11:09.834349"
   }
 }

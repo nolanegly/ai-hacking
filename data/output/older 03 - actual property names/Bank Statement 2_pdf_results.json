@@ -1,7 +1,7 @@
 {
   "extraction_summary": {
     "total_files_processed": 1,
-    "processed_at": "2025-09-23T15:43:01.790778",
+    "processed_at": "2025-09-23T15:11:39.518155",
     "extraction_types": [
       "personalData",
       "extraction_metadata"
@@ -27,19 +27,19 @@
   ],
   "extraction_metadata": {
     "filename": "Bank Statement 2.pdf",
-    "processed_at": "2025-09-23T15:42:56.126955",
+    "processed_at": "2025-09-23T15:11:32.497649",
     "extractors_run": [
       {
         "name": "personal_data_extractor",
         "type": "personal_data",
         "success": true,
-        "processing_time": 2.943721,
+        "processing_time": 3.296196,
         "confidence": 0.2833333333333334
       }
     ],
-    "total_processing_time": 2.944263,
+    "total_processing_time": 3.296858,
     "success_count": 1,
     "error_count": 0,
-    "completed_at": "2025-09-23T15:42:59.071223"
+    "completed_at": "2025-09-23T15:11:35.794514"
   }
 }

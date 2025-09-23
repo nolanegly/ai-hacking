@@ -294,3 +294,161 @@ class OutputManager:
                 })
 
         return sorted(files, key=lambda x: x['modified'], reverse=True)
+
+    def create_personal_data_aggregation(self, all_results: Dict[str, Dict[str, Any]]) -> Dict[str, Any]:
+        """
+        Aggregate personal data across all documents to identify patterns and inconsistencies.
+
+        Args:
+            all_results: Dictionary of all extraction results by filename.
+
+        Returns:
+            Aggregated personal data with all values and their source files.
+        """
+        aggregated_data = {}
+
+        # Process each document's results
+        for filename, results in all_results.items():
+            if "personalData" not in results:
+                continue
+
+            personal_data_result = results["personalData"]
+            if not isinstance(personal_data_result, dict) or "data" not in personal_data_result:
+                continue
+
+            # Process each personal data field found in this document
+            for record in personal_data_result["data"]:
+                field_name = record.get("field_name", "")
+                field_value = record.get("field_value", "")
+                confidence = record.get("confidence", 0.0)
+
+                # Skip "Not found" values
+                if field_value == "Not found":
+                    continue
+
+                # Convert to camelCase
+                camel_case_field = self._convert_to_camel_case(field_name)
+
+                # Initialize field in aggregated data if not exists
+                if camel_case_field not in aggregated_data:
+                    aggregated_data[camel_case_field] = []
+
+                # Look for existing value entry
+                existing_value_entry = None
+                for value_entry in aggregated_data[camel_case_field]:
+                    if value_entry["value"] == field_value:
+                        existing_value_entry = value_entry
+                        break
+
+                # Add new value entry or update existing one
+                if existing_value_entry:
+                    # Add this file instance to existing value
+                    existing_value_entry["instances"].append({
+                        "file": filename,
+                        "confidence": confidence
+                    })
+                    # Update average confidence
+                    confidences = [inst["confidence"] for inst in existing_value_entry["instances"]]
+                    existing_value_entry["averageConfidence"] = sum(confidences) / len(confidences)
+                else:
+                    # Create new value entry
+                    aggregated_data[camel_case_field].append({
+                        "value": field_value,
+                        "instances": [{
+                            "file": filename,
+                            "confidence": confidence
+                        }],
+                        "averageConfidence": confidence,
+                        "occurrences": 1
+                    })
+
+            # Update occurrence counts for all values in this field
+            for field_name, values in aggregated_data.items():
+                for value_entry in values:
+                    value_entry["occurrences"] = len(value_entry["instances"])
+
+        # Sort values by occurrence count (most common first)
+        for field_name in aggregated_data:
+            aggregated_data[field_name].sort(
+                key=lambda x: (x["occurrences"], x["averageConfidence"]),
+                reverse=True
+            )
+
+        return {
+            "aggregated_personal_data": aggregated_data,
+            "summary": self._generate_aggregation_summary(aggregated_data, len(all_results)),
+            "generated_at": datetime.now().isoformat()
+        }
+
+    def _generate_aggregation_summary(self, aggregated_data: Dict[str, List], total_files: int) -> Dict[str, Any]:
+        """Generate summary statistics for the aggregated personal data."""
+        summary = {
+            "total_files_processed": total_files,
+            "fields_with_data": len(aggregated_data),
+            "total_unique_values": sum(len(values) for values in aggregated_data.values()),
+            "inconsistencies_found": [],
+            "most_common_values": {},
+            "confidence_analysis": {}
+        }
+
+        # Analyze each field for inconsistencies and patterns
+        for field_name, values in aggregated_data.items():
+            if len(values) > 1:
+                # Multiple values found for this field - potential inconsistency
+                summary["inconsistencies_found"].append({
+                    "field": field_name,
+                    "value_count": len(values),
+                    "values": [v["value"] for v in values[:3]]  # Show top 3 values
+                })
+
+            # Most common value for this field
+            if values:
+                most_common = values[0]  # Already sorted by occurrence
+                summary["most_common_values"][field_name] = {
+                    "value": most_common["value"],
+                    "occurrences": most_common["occurrences"],
+                    "confidence": most_common["averageConfidence"]
+                }
+
+            # Confidence analysis
+            all_confidences = []
+            for value_entry in values:
+                all_confidences.extend([inst["confidence"] for inst in value_entry["instances"]])
+
+            if all_confidences:
+                summary["confidence_analysis"][field_name] = {
+                    "average_confidence": sum(all_confidences) / len(all_confidences),
+                    "min_confidence": min(all_confidences),
+                    "max_confidence": max(all_confidences),
+                    "total_instances": len(all_confidences)
+                }
+
+        return summary
+
+    def save_personal_data_aggregation(self, aggregation_data: Dict[str, Any], filename: str = None) -> str:
+        """
+        Save personal data aggregation to a JSON file.
+
+        Args:
+            aggregation_data: The aggregation data to save.
+            filename: Output filename. If None, generates timestamp-based name.
+
+        Returns:
+            Path to the saved file.
+        """
+        if filename is None:
+            timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+            filename = f"personal_data_aggregation_{timestamp}.json"
+
+        output_path = self.output_dir / filename
+
+        try:
+            with open(output_path, 'w', encoding='utf-8') as f:
+                json.dump(aggregation_data, f, indent=2, ensure_ascii=False)
+
+            self.logger.info(f"Personal data aggregation saved to: {output_path}")
+            return str(output_path)
+
+        except Exception as e:
+            self.logger.error(f"Failed to save personal data aggregation: {str(e)}")
+            raise

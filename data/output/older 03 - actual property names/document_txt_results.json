@@ -1,7 +1,7 @@
 {
   "extraction_summary": {
     "total_files_processed": 1,
-    "processed_at": "2025-09-23T15:43:01.785329",
+    "processed_at": "2025-09-23T15:11:39.513330",
     "extraction_types": [
       "personalData",
       "tabularData",
@@ -82,26 +82,26 @@
   ],
   "extraction_metadata": {
     "filename": "document.txt",
-    "processed_at": "2025-09-23T15:42:18.978124",
+    "processed_at": "2025-09-23T15:10:56.806922",
     "extractors_run": [
       {
         "name": "personal_data_extractor",
         "type": "personal_data",
         "success": true,
-        "processing_time": 2.236579,
+        "processing_time": 2.247107,
         "confidence": 0.375
       },
       {
         "name": "tabular_data_extractor",
         "type": "tabular_data",
         "success": true,
-        "processing_time": 2.040986,
+        "processing_time": 2.071058,
         "confidence": 0.925
       }
     ],
-    "total_processing_time": 4.278636,
+    "total_processing_time": 4.318633,
     "success_count": 2,
     "error_count": 0,
-    "completed_at": "2025-09-23T15:42:23.256763"
+    "completed_at": "2025-09-23T15:11:01.125563"
   }
 }
