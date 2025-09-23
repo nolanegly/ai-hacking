@@ -1,0 +1,351 @@
+{
+  "extraction_summary": {
+    "total_files_processed": 9,
+    "total_records": 108,
+    "processed_at": "2025-09-23T13:15:13.121551"
+  },
+  "results": {
+    "HSBC_Example_Statement.pdf": [
+      {
+        "record": "First name: John"
+      },
+      {
+        "record": "Last name: Doe"
+      },
+      {
+        "record": "Middle name: Not found"
+      },
+      {
+        "record": "Date of birth: 1985-06-15"
+      },
+      {
+        "record": "Social Security Number: 123-45-6789"
+      },
+      {
+        "record": "Phone number: 555-1234"
+      },
+      {
+        "record": "Email address: john.doe@example.com"
+      },
+      {
+        "record": "Home address: 123 Main St, Anytown USA 12345"
+      },
+      {
+        "record": "Employment status: Employed"
+      },
+      {
+        "record": "Annual income: 75000"
+      },
+      {
+        "record": "Employer name: ABC Corporation"
+      },
+      {
+        "record": "Job title: Software Engineer"
+      }
+    ],
+    "Bank Statement 2a.docx": [
+      {
+        "record": "First name: Jane"
+      },
+      {
+        "record": "Last name: Goodall"
+      },
+      {
+        "record": "Middle name: Not found"
+      },
+      {
+        "record": "Date of birth: Not found"
+      },
+      {
+        "record": "Social Security Number: Not found"
+      },
+      {
+        "record": "Phone number: Not found"
+      },
+      {
+        "record": "Email address: Not found"
+      },
+      {
+        "record": "Home address: Not found"
+      },
+      {
+        "record": "Employment status: Not found"
+      },
+      {
+        "record": "Annual income: Not found"
+      },
+      {
+        "record": "Employer name: Not found"
+      },
+      {
+        "record": "Job title: Not found"
+      }
+    ],
+    "New Firm Application Sample_PAWNEE LAW FIRM PC - 2024.pdf": [
+      {
+        "record": "First name: Not found"
+      },
+      {
+        "record": "Last name: Not found"
+      },
+      {
+        "record": "Middle name: Not found"
+      },
+      {
+        "record": "Date of birth: Not found"
+      },
+      {
+        "record": "Social Security Number: Not found"
+      },
+      {
+        "record": "Phone number: Not found"
+      },
+      {
+        "record": "Email address: Not found"
+      },
+      {
+        "record": "Home address: Not found"
+      },
+      {
+        "record": "Employment status: Not found"
+      },
+      {
+        "record": "Annual income: Not found"
+      },
+      {
+        "record": "Employer name: Not found"
+      },
+      {
+        "record": "Job title: Not found"
+      }
+    ],
+    "Bank Statement 2.docx": [
+      {
+        "record": "First name: Jane"
+      },
+      {
+        "record": "Last name: Goodall"
+      },
+      {
+        "record": "Middle name: Not found"
+      },
+      {
+        "record": "Date of birth: Not found"
+      },
+      {
+        "record": "Social Security Number: Not found"
+      },
+      {
+        "record": "Phone number: Not found"
+      },
+      {
+        "record": "Email address: Not found"
+      },
+      {
+        "record": "Home address: Not found"
+      },
+      {
+        "record": "Employment status: Not found"
+      },
+      {
+        "record": "Annual income: Not found"
+      },
+      {
+        "record": "Employer name: Not found"
+      },
+      {
+        "record": "Job title: Not found"
+      }
+    ],
+    "Bank Statement 1.docx": [
+      {
+        "record": "First name: John"
+      },
+      {
+        "record": "Last name: Doe"
+      },
+      {
+        "record": "Middle name: Not found"
+      },
+      {
+        "record": "Date of birth: Not found"
+      },
+      {
+        "record": "Social Security Number: Not found"
+      },
+      {
+        "record": "Phone number: Not found"
+      },
+      {
+        "record": "Email address: Not found"
+      },
+      {
+        "record": "Home address: Not found"
+      },
+      {
+        "record": "Employment status: Not found"
+      },
+      {
+        "record": "Annual income: Not found"
+      },
+      {
+        "record": "Employer name: Not found"
+      },
+      {
+        "record": "Job title: Not found"
+      }
+    ],
+    "nje bank statement 01.docx": [
+      {
+        "record": "First name: John"
+      },
+      {
+        "record": "Last name: Smith"
+      },
+      {
+        "record": "Middle name: A."
+      },
+      {
+        "record": "Date of birth: Not found"
+      },
+      {
+        "record": "Social Security Number: Not found"
+      },
+      {
+        "record": "Phone number: (217) 555-1234"
+      },
+      {
+        "record": "Email address: john.smith@email.com"
+      },
+      {
+        "record": "Home address: 123 Maple Street, Springfield, IL 62704"
+      },
+      {
+        "record": "Employment status: Not found"
+      },
+      {
+        "record": "Annual income: Not found"
+      },
+      {
+        "record": "Employer name: Not found"
+      },
+      {
+        "record": "Job title: Not found"
+      }
+    ],
+    "Bank Statement 2b.docx": [
+      {
+        "record": "First name: Jane"
+      },
+      {
+        "record": "Last name: Goodall"
+      },
+      {
+        "record": "Middle name: Not found"
+      },
+      {
+        "record": "Date of birth: Not found"
+      },
+      {
+        "record": "Social Security Number: Not found"
+      },
+      {
+        "record": "Phone number: Not found"
+      },
+      {
+        "record": "Email address: Not found"
+      },
+      {
+        "record": "Home address: Not found"
+      },
+      {
+        "record": "Employment status: Not found"
+      },
+      {
+        "record": "Annual income: Not found"
+      },
+      {
+        "record": "Employer name: Not found"
+      },
+      {
+        "record": "Job title: Not found"
+      }
+    ],
+    "Bank Statement 2.pdf": [
+      {
+        "record": "First name: Jane"
+      },
+      {
+        "record": "Last name: Smith"
+      },
+      {
+        "record": "Middle name: Not found"
+      },
+      {
+        "record": "Date of birth: Not found"
+      },
+      {
+        "record": "Social Security Number: Not found"
+      },
+      {
+        "record": "Phone number: Not found"
+      },
+      {
+        "record": "Email address: Not found"
+      },
+      {
+        "record": "Home address: Not found"
+      },
+      {
+        "record": "Employment status: Not found"
+      },
+      {
+        "record": "Annual income: Not found"
+      },
+      {
+        "record": "Employer name: Not found"
+      },
+      {
+        "record": "Job title: Not found"
+      }
+    ],
+    "Bank Statement 1.pdf": [
+      {
+        "record": "First name: John"
+      },
+      {
+        "record": "Last name: Doe"
+      },
+      {
+        "record": "Middle name: Not found"
+      },
+      {
+        "record": "Date of birth: Not found"
+      },
+      {
+        "record": "Social Security Number: Not found"
+      },
+      {
+        "record": "Phone number: Not found"
+      },
+      {
+        "record": "Email address: Not found"
+      },
+      {
+        "record": "Home address: Not found"
+      },
+      {
+        "record": "Employment status: Not found"
+      },
+      {
+        "record": "Annual income: Not found"
+      },
+      {
+        "record": "Employer name: Not found"
+      },
+      {
+        "record": "Job title: Not found"
+      }
+    ]
+  }
+}

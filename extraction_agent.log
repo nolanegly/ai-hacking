@@ -1,0 +1,44 @@
+2025-09-23 13:13:35,453 - __main__ - INFO - Initializing Document Extraction Agent...
+2025-09-23 13:13:35,489 - __main__ - INFO - Processing documents from: data/input
+2025-09-23 13:13:35,489 - __main__ - WARNING - No supported documents found in the input directory.
+2025-09-23 13:14:55,950 - __main__ - INFO - Initializing Document Extraction Agent...
+2025-09-23 13:14:55,979 - __main__ - INFO - Processing documents from: data/input
+2025-09-23 13:14:55,999 - agent.utils.document_processor - INFO - Successfully processed: HSBC_Example_Statement.pdf
+2025-09-23 13:14:56,156 - agent.utils.document_processor - INFO - Successfully processed: Bank Statement 2a.docx
+2025-09-23 13:14:56,344 - agent.utils.document_processor - INFO - Successfully processed: New Firm Application Sample_PAWNEE LAW FIRM PC - 2024.pdf
+2025-09-23 13:14:56,346 - agent.utils.document_processor - INFO - Successfully processed: Bank Statement 2.docx
+2025-09-23 13:14:56,349 - agent.utils.document_processor - INFO - Successfully processed: Bank Statement 1.docx
+2025-09-23 13:14:56,350 - agent.utils.document_processor - INFO - Successfully processed: nje bank statement 01.docx
+2025-09-23 13:14:56,352 - agent.utils.document_processor - INFO - Successfully processed: Bank Statement 2b.docx
+2025-09-23 13:14:56,365 - agent.utils.document_processor - INFO - Successfully processed: Bank Statement 2.pdf
+2025-09-23 13:14:56,376 - agent.utils.document_processor - INFO - Successfully processed: Bank Statement 1.pdf
+2025-09-23 13:14:56,376 - __main__ - INFO - Found 9 documents to process
+2025-09-23 13:14:56,376 - __main__ - INFO - Processing: HSBC_Example_Statement.pdf
+2025-09-23 13:14:57,929 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-09-23 13:14:57,944 - __main__ - INFO - Successfully processed HSBC_Example_Statement.pdf - extracted 12 fields
+2025-09-23 13:14:57,944 - __main__ - INFO - Processing: Bank Statement 2a.docx
+2025-09-23 13:14:59,168 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-09-23 13:14:59,170 - __main__ - INFO - Successfully processed Bank Statement 2a.docx - extracted 12 fields
+2025-09-23 13:14:59,171 - __main__ - INFO - Processing: New Firm Application Sample_PAWNEE LAW FIRM PC - 2024.pdf
+2025-09-23 13:15:05,792 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-09-23 13:15:05,795 - __main__ - INFO - Successfully processed New Firm Application Sample_PAWNEE LAW FIRM PC - 2024.pdf - extracted 12 fields
+2025-09-23 13:15:05,795 - __main__ - INFO - Processing: Bank Statement 2.docx
+2025-09-23 13:15:07,055 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-09-23 13:15:07,059 - __main__ - INFO - Successfully processed Bank Statement 2.docx - extracted 12 fields
+2025-09-23 13:15:07,060 - __main__ - INFO - Processing: Bank Statement 1.docx
+2025-09-23 13:15:08,229 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-09-23 13:15:08,232 - __main__ - INFO - Successfully processed Bank Statement 1.docx - extracted 12 fields
+2025-09-23 13:15:08,232 - __main__ - INFO - Processing: nje bank statement 01.docx
+2025-09-23 13:15:09,659 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-09-23 13:15:09,661 - __main__ - INFO - Successfully processed nje bank statement 01.docx - extracted 12 fields
+2025-09-23 13:15:09,662 - __main__ - INFO - Processing: Bank Statement 2b.docx
+2025-09-23 13:15:10,850 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-09-23 13:15:10,851 - __main__ - INFO - Successfully processed Bank Statement 2b.docx - extracted 12 fields
+2025-09-23 13:15:10,851 - __main__ - INFO - Processing: Bank Statement 2.pdf
+2025-09-23 13:15:11,927 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-09-23 13:15:11,927 - __main__ - INFO - Successfully processed Bank Statement 2.pdf - extracted 12 fields
+2025-09-23 13:15:11,927 - __main__ - INFO - Processing: Bank Statement 1.pdf
+2025-09-23 13:15:13,118 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-09-23 13:15:13,120 - __main__ - INFO - Successfully processed Bank Statement 1.pdf - extracted 12 fields
+2025-09-23 13:15:13,120 - __main__ - INFO - Saving extraction results...
+2025-09-23 13:15:13,123 - agent.utils.output_manager - INFO - Results saved to: data/output/extraction_results_20250923_131513.json
