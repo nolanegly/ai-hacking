@@ -1,0 +1,24 @@
+LOAN APPLICATION FORM
+
+Personal Information:
+First Name: John
+Last Name: Smith
+Middle Initial: M
+Date of Birth: 03/15/1985
+Social Security Number: 123-45-6789
+
+Contact Information:
+Phone Number: (555) 123-4567
+Email Address: john.smith@email.com
+Home Address: 123 Main Street, Anytown, NY 12345
+
+Employment Information:
+Employment Status: Full-time employed
+Annual Income: $75,000
+Employer Name: ABC Corporation
+Job Title: Software Engineer
+
+Additional Information:
+Years at current job: 3
+Monthly mortgage/rent: $1,800
+Purpose of loan: Home improvement

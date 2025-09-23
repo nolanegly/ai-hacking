@@ -111,7 +111,7 @@ Examples:
         agent.set_model_config(model=args.model)
 
         doc_processor = DocumentProcessor()
-        extractor = PersonalDataExtractor()
+        extractor = PersonalDataExtractor(agent.client)
         output_manager = OutputManager(args.output_dir)
 
         # Process documents
@@ -131,12 +131,9 @@ Examples:
             logger.info(f"Processing: {doc['filename']}")
 
             try:
-                # Extract data using Claude
-                raw_data = agent.process_document(doc['content'])
-
-                # Format and validate extracted data
-                formatted_results = extractor.extract_and_format(
-                    raw_data,
+                # Extract data directly using Claude through the extractor
+                formatted_results = extractor.extract_from_document(
+                    doc['content'],
                     doc['filename']
                 )
 
