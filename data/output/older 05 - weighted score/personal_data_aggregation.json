@@ -1,0 +1,771 @@
+{
+  "aggregated_personal_data": {
+    "firstName": [
+      {
+        "value": "Jane",
+        "instances": [
+          {
+            "file": "Bank Statement 2a.docx",
+            "confidence": 0.9
+          },
+          {
+            "file": "Bank Statement 2.docx",
+            "confidence": 0.9
+          },
+          {
+            "file": "Bank Statement 2b.docx",
+            "confidence": 0.9
+          },
+          {
+            "file": "Bank Statement 2.pdf",
+            "confidence": 0.9
+          }
+        ],
+        "occurrences": 4,
+        "weightedScore": 0.4
+      },
+      {
+        "value": "John",
+        "instances": [
+          {
+            "file": "sample_application.txt",
+            "confidence": 0.9
+          },
+          {
+            "file": "Bank Statement 1.docx",
+            "confidence": 0.9
+          },
+          {
+            "file": "nje bank statement 01.docx",
+            "confidence": 0.9
+          },
+          {
+            "file": "Bank Statement 1.pdf",
+            "confidence": 0.9
+          }
+        ],
+        "occurrences": 4,
+        "weightedScore": 0.4
+      },
+      {
+        "value": "Bob",
+        "instances": [
+          {
+            "file": "document.txt",
+            "confidence": 0.9
+          }
+        ],
+        "occurrences": 1,
+        "weightedScore": 0.1
+      },
+      {
+        "value": "Sarah",
+        "instances": [
+          {
+            "file": "financial_statement.txt",
+            "confidence": 1.0
+          }
+        ],
+        "occurrences": 1,
+        "weightedScore": 0.1
+      }
+    ],
+    "lastName": [
+      {
+        "value": "Smith",
+        "instances": [
+          {
+            "file": "document.txt",
+            "confidence": 0.9
+          },
+          {
+            "file": "sample_application.txt",
+            "confidence": 0.9
+          },
+          {
+            "file": "nje bank statement 01.docx",
+            "confidence": 0.9
+          },
+          {
+            "file": "Bank Statement 2.pdf",
+            "confidence": 0.9
+          }
+        ],
+        "occurrences": 4,
+        "weightedScore": 0.4
+      },
+      {
+        "value": "Goodall",
+        "instances": [
+          {
+            "file": "Bank Statement 2a.docx",
+            "confidence": 0.9
+          },
+          {
+            "file": "Bank Statement 2.docx",
+            "confidence": 0.9
+          },
+          {
+            "file": "Bank Statement 2b.docx",
+            "confidence": 0.9
+          }
+        ],
+        "occurrences": 3,
+        "weightedScore": 0.3
+      },
+      {
+        "value": "Doe",
+        "instances": [
+          {
+            "file": "Bank Statement 1.docx",
+            "confidence": 0.9
+          },
+          {
+            "file": "Bank Statement 1.pdf",
+            "confidence": 0.9
+          }
+        ],
+        "occurrences": 2,
+        "weightedScore": 0.2
+      },
+      {
+        "value": "Johnson",
+        "instances": [
+          {
+            "file": "financial_statement.txt",
+            "confidence": 1.0
+          }
+        ],
+        "occurrences": 1,
+        "weightedScore": 0.1
+      }
+    ],
+    "phoneNumber": [
+      {
+        "value": "(555) 987-7777",
+        "instances": [
+          {
+            "file": "Bank Statement 2a.docx",
+            "confidence": 0.8
+          },
+          {
+            "file": "Bank Statement 2.docx",
+            "confidence": 0.8
+          },
+          {
+            "file": "Bank Statement 2b.docx",
+            "confidence": 0.8
+          }
+        ],
+        "occurrences": 3,
+        "weightedScore": 0.3
+      },
+      {
+        "value": "(555) 123-4567",
+        "instances": [
+          {
+            "file": "sample_application.txt",
+            "confidence": 0.9
+          },
+          {
+            "file": "Bank Statement 1.docx",
+            "confidence": 0.8
+          },
+          {
+            "file": "Bank Statement 1.pdf",
+            "confidence": 0.9
+          }
+        ],
+        "occurrences": 3,
+        "weightedScore": 0.3
+      },
+      {
+        "value": "(555) 333-4444",
+        "instances": [
+          {
+            "file": "document.txt",
+            "confidence": 0.9
+          }
+        ],
+        "occurrences": 1,
+        "weightedScore": 0.1
+      },
+      {
+        "value": "(217) 555-9876",
+        "instances": [
+          {
+            "file": "financial_statement.txt",
+            "confidence": 1.0
+          }
+        ],
+        "occurrences": 1,
+        "weightedScore": 0.1
+      },
+      {
+        "value": "(217) 555-1234",
+        "instances": [
+          {
+            "file": "nje bank statement 01.docx",
+            "confidence": 0.9
+          }
+        ],
+        "occurrences": 1,
+        "weightedScore": 0.1
+      },
+      {
+        "value": "(555) 987-6543",
+        "instances": [
+          {
+            "file": "Bank Statement 2.pdf",
+            "confidence": 0.8
+          }
+        ],
+        "occurrences": 1,
+        "weightedScore": 0.1
+      }
+    ],
+    "homeAddress": [
+      {
+        "value": "432 Elm St, Othertown, USA 67890",
+        "instances": [
+          {
+            "file": "Bank Statement 2a.docx",
+            "confidence": 0.8
+          },
+          {
+            "file": "Bank Statement 2.docx",
+            "confidence": 0.8
+          },
+          {
+            "file": "Bank Statement 2b.docx",
+            "confidence": 0.8
+          }
+        ],
+        "occurrences": 3,
+        "weightedScore": 0.3
+      },
+      {
+        "value": "123 Main St, Anytown, USA 12345",
+        "instances": [
+          {
+            "file": "Bank Statement 1.docx",
+            "confidence": 0.8
+          },
+          {
+            "file": "Bank Statement 1.pdf",
+            "confidence": 0.8
+          }
+        ],
+        "occurrences": 2,
+        "weightedScore": 0.2
+      },
+      {
+        "value": "321 Oak Avenue, Town, State 54321",
+        "instances": [
+          {
+            "file": "document.txt",
+            "confidence": 0.9
+          }
+        ],
+        "occurrences": 1,
+        "weightedScore": 0.1
+      },
+      {
+        "value": "123 Main Street, Anytown, NY 12345",
+        "instances": [
+          {
+            "file": "sample_application.txt",
+            "confidence": 0.9
+          }
+        ],
+        "occurrences": 1,
+        "weightedScore": 0.1
+      },
+      {
+        "value": "456 Oak Avenue, Springfield, IL 62701",
+        "instances": [
+          {
+            "file": "financial_statement.txt",
+            "confidence": 1.0
+          }
+        ],
+        "occurrences": 1,
+        "weightedScore": 0.1
+      },
+      {
+        "value": "123 Maple Street, Springfield, IL 62704",
+        "instances": [
+          {
+            "file": "nje bank statement 01.docx",
+            "confidence": 0.9
+          }
+        ],
+        "occurrences": 1,
+        "weightedScore": 0.1
+      },
+      {
+        "value": "456 Elm St, Other town, USA 67890",
+        "instances": [
+          {
+            "file": "Bank Statement 2.pdf",
+            "confidence": 0.8
+          }
+        ],
+        "occurrences": 1,
+        "weightedScore": 0.1
+      }
+    ],
+    "emailAddress": [
+      {
+        "value": "john.smith@email.com",
+        "instances": [
+          {
+            "file": "sample_application.txt",
+            "confidence": 0.9
+          },
+          {
+            "file": "nje bank statement 01.docx",
+            "confidence": 0.9
+          }
+        ],
+        "occurrences": 2,
+        "weightedScore": 0.5
+      },
+      {
+        "value": "bob@example.com",
+        "instances": [
+          {
+            "file": "document.txt",
+            "confidence": 0.9
+          }
+        ],
+        "occurrences": 1,
+        "weightedScore": 0.25
+      },
+      {
+        "value": "sarah.johnson@email.com",
+        "instances": [
+          {
+            "file": "financial_statement.txt",
+            "confidence": 1.0
+          }
+        ],
+        "occurrences": 1,
+        "weightedScore": 0.25
+      }
+    ],
+    "middleName": [
+      {
+        "value": "M",
+        "instances": [
+          {
+            "file": "sample_application.txt",
+            "confidence": 0.8
+          }
+        ],
+        "occurrences": 1,
+        "weightedScore": 0.5
+      },
+      {
+        "value": "A.",
+        "instances": [
+          {
+            "file": "nje bank statement 01.docx",
+            "confidence": 0.8
+          }
+        ],
+        "occurrences": 1,
+        "weightedScore": 0.5
+      }
+    ],
+    "dateOfBirth": [
+      {
+        "value": "03/15/1985",
+        "instances": [
+          {
+            "file": "sample_application.txt",
+            "confidence": 0.9
+          }
+        ],
+        "occurrences": 1,
+        "weightedScore": 0.5
+      },
+      {
+        "value": "08/22/1988",
+        "instances": [
+          {
+            "file": "financial_statement.txt",
+            "confidence": 1.0
+          }
+        ],
+        "occurrences": 1,
+        "weightedScore": 0.5
+      }
+    ],
+    "socialSecurityNumber": [
+      {
+        "value": "123-45-6789",
+        "instances": [
+          {
+            "file": "sample_application.txt",
+            "confidence": 0.9
+          }
+        ],
+        "occurrences": 1,
+        "weightedScore": 0.5
+      },
+      {
+        "value": "987-65-4321",
+        "instances": [
+          {
+            "file": "financial_statement.txt",
+            "confidence": 1.0
+          }
+        ],
+        "occurrences": 1,
+        "weightedScore": 0.5
+      }
+    ],
+    "employmentStatus": [
+      {
+        "value": "Full-time employed",
+        "instances": [
+          {
+            "file": "sample_application.txt",
+            "confidence": 0.9
+          }
+        ],
+        "occurrences": 1,
+        "weightedScore": 0.5
+      },
+      {
+        "value": "Full-time",
+        "instances": [
+          {
+            "file": "financial_statement.txt",
+            "confidence": 1.0
+          }
+        ],
+        "occurrences": 1,
+        "weightedScore": 0.5
+      }
+    ],
+    "annualIncome": [
+      {
+        "value": "$75,000",
+        "instances": [
+          {
+            "file": "sample_application.txt",
+            "confidence": 0.9
+          }
+        ],
+        "occurrences": 1,
+        "weightedScore": 0.5
+      },
+      {
+        "value": "$95,000",
+        "instances": [
+          {
+            "file": "financial_statement.txt",
+            "confidence": 1.0
+          }
+        ],
+        "occurrences": 1,
+        "weightedScore": 0.5
+      }
+    ],
+    "employerName": [
+      {
+        "value": "ABC Corporation",
+        "instances": [
+          {
+            "file": "sample_application.txt",
+            "confidence": 0.9
+          }
+        ],
+        "occurrences": 1,
+        "weightedScore": 0.5
+      },
+      {
+        "value": "TechCorp Solutions",
+        "instances": [
+          {
+            "file": "financial_statement.txt",
+            "confidence": 1.0
+          }
+        ],
+        "occurrences": 1,
+        "weightedScore": 0.5
+      }
+    ],
+    "jobTitle": [
+      {
+        "value": "Software Engineer",
+        "instances": [
+          {
+            "file": "sample_application.txt",
+            "confidence": 0.9
+          }
+        ],
+        "occurrences": 1,
+        "weightedScore": 0.5
+      },
+      {
+        "value": "Senior Software Developer",
+        "instances": [
+          {
+            "file": "financial_statement.txt",
+            "confidence": 1.0
+          }
+        ],
+        "occurrences": 1,
+        "weightedScore": 0.5
+      }
+    ]
+  },
+  "summary": {
+    "total_files_processed": 12,
+    "fields_with_data": 12,
+    "total_unique_values": 38,
+    "inconsistencies_found": [
+      {
+        "field": "firstName",
+        "value_count": 4,
+        "values": [
+          "Jane",
+          "John",
+          "Bob"
+        ]
+      },
+      {
+        "field": "lastName",
+        "value_count": 4,
+        "values": [
+          "Smith",
+          "Goodall",
+          "Doe"
+        ]
+      },
+      {
+        "field": "phoneNumber",
+        "value_count": 6,
+        "values": [
+          "(555) 987-7777",
+          "(555) 123-4567",
+          "(555) 333-4444"
+        ]
+      },
+      {
+        "field": "homeAddress",
+        "value_count": 7,
+        "values": [
+          "432 Elm St, Othertown, USA 67890",
+          "123 Main St, Anytown, USA 12345",
+          "321 Oak Avenue, Town, State 54321"
+        ]
+      },
+      {
+        "field": "emailAddress",
+        "value_count": 3,
+        "values": [
+          "john.smith@email.com",
+          "bob@example.com",
+          "sarah.johnson@email.com"
+        ]
+      },
+      {
+        "field": "middleName",
+        "value_count": 2,
+        "values": [
+          "M",
+          "A."
+        ]
+      },
+      {
+        "field": "dateOfBirth",
+        "value_count": 2,
+        "values": [
+          "03/15/1985",
+          "08/22/1988"
+        ]
+      },
+      {
+        "field": "socialSecurityNumber",
+        "value_count": 2,
+        "values": [
+          "123-45-6789",
+          "987-65-4321"
+        ]
+      },
+      {
+        "field": "employmentStatus",
+        "value_count": 2,
+        "values": [
+          "Full-time employed",
+          "Full-time"
+        ]
+      },
+      {
+        "field": "annualIncome",
+        "value_count": 2,
+        "values": [
+          "$75,000",
+          "$95,000"
+        ]
+      },
+      {
+        "field": "employerName",
+        "value_count": 2,
+        "values": [
+          "ABC Corporation",
+          "TechCorp Solutions"
+        ]
+      },
+      {
+        "field": "jobTitle",
+        "value_count": 2,
+        "values": [
+          "Software Engineer",
+          "Senior Software Developer"
+        ]
+      }
+    ],
+    "most_common_values": {
+      "firstName": {
+        "value": "Jane",
+        "occurrences": 4,
+        "weightedScore": 0.4
+      },
+      "lastName": {
+        "value": "Smith",
+        "occurrences": 4,
+        "weightedScore": 0.4
+      },
+      "phoneNumber": {
+        "value": "(555) 987-7777",
+        "occurrences": 3,
+        "weightedScore": 0.3
+      },
+      "homeAddress": {
+        "value": "432 Elm St, Othertown, USA 67890",
+        "occurrences": 3,
+        "weightedScore": 0.3
+      },
+      "emailAddress": {
+        "value": "john.smith@email.com",
+        "occurrences": 2,
+        "weightedScore": 0.5
+      },
+      "middleName": {
+        "value": "M",
+        "occurrences": 1,
+        "weightedScore": 0.5
+      },
+      "dateOfBirth": {
+        "value": "03/15/1985",
+        "occurrences": 1,
+        "weightedScore": 0.5
+      },
+      "socialSecurityNumber": {
+        "value": "123-45-6789",
+        "occurrences": 1,
+        "weightedScore": 0.5
+      },
+      "employmentStatus": {
+        "value": "Full-time employed",
+        "occurrences": 1,
+        "weightedScore": 0.5
+      },
+      "annualIncome": {
+        "value": "$75,000",
+        "occurrences": 1,
+        "weightedScore": 0.5
+      },
+      "employerName": {
+        "value": "ABC Corporation",
+        "occurrences": 1,
+        "weightedScore": 0.5
+      },
+      "jobTitle": {
+        "value": "Software Engineer",
+        "occurrences": 1,
+        "weightedScore": 0.5
+      }
+    },
+    "confidence_analysis": {
+      "firstName": {
+        "average_confidence": 0.9099999999999999,
+        "min_confidence": 0.9,
+        "max_confidence": 1.0,
+        "total_instances": 10
+      },
+      "lastName": {
+        "average_confidence": 0.9099999999999999,
+        "min_confidence": 0.9,
+        "max_confidence": 1.0,
+        "total_instances": 10
+      },
+      "phoneNumber": {
+        "average_confidence": 0.86,
+        "min_confidence": 0.8,
+        "max_confidence": 1.0,
+        "total_instances": 10
+      },
+      "homeAddress": {
+        "average_confidence": 0.85,
+        "min_confidence": 0.8,
+        "max_confidence": 1.0,
+        "total_instances": 10
+      },
+      "emailAddress": {
+        "average_confidence": 0.925,
+        "min_confidence": 0.9,
+        "max_confidence": 1.0,
+        "total_instances": 4
+      },
+      "middleName": {
+        "average_confidence": 0.8,
+        "min_confidence": 0.8,
+        "max_confidence": 0.8,
+        "total_instances": 2
+      },
+      "dateOfBirth": {
+        "average_confidence": 0.95,
+        "min_confidence": 0.9,
+        "max_confidence": 1.0,
+        "total_instances": 2
+      },
+      "socialSecurityNumber": {
+        "average_confidence": 0.95,
+        "min_confidence": 0.9,
+        "max_confidence": 1.0,
+        "total_instances": 2
+      },
+      "employmentStatus": {
+        "average_confidence": 0.95,
+        "min_confidence": 0.9,
+        "max_confidence": 1.0,
+        "total_instances": 2
+      },
+      "annualIncome": {
+        "average_confidence": 0.95,
+        "min_confidence": 0.9,
+        "max_confidence": 1.0,
+        "total_instances": 2
+      },
+      "employerName": {
+        "average_confidence": 0.95,
+        "min_confidence": 0.9,
+        "max_confidence": 1.0,
+        "total_instances": 2
+      },
+      "jobTitle": {
+        "average_confidence": 0.95,
+        "min_confidence": 0.9,
+        "max_confidence": 1.0,
+        "total_instances": 2
+      }
+    }
+  },
+  "generated_at": "2025-09-23T15:56:13.617405"
+}

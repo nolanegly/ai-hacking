@@ -1,0 +1,85 @@
+{
+  "extraction_summary": {
+    "total_files_processed": 1,
+    "processed_at": "2025-09-23T15:56:13.613813",
+    "extraction_types": [
+      "personalData",
+      "tabularData",
+      "extraction_metadata"
+    ]
+  },
+  "personalData": [
+    {
+      "firstName": "John",
+      "confidence": 0.9
+    },
+    {
+      "lastName": "Doe",
+      "confidence": 0.9
+    },
+    {
+      "phoneNumber": "(555) 123-4567",
+      "confidence": 0.8
+    },
+    {
+      "homeAddress": "123 Main St, Anytown, USA 12345",
+      "confidence": 0.8
+    }
+  ],
+  "tabularData": [
+    {
+      "dataType": "financial_data",
+      "headers": [
+        "Description",
+        "Amount"
+      ],
+      "data": [
+        [
+          "Beginning Balance (August 1, 2025)",
+          "$2,500.00"
+        ],
+        [
+          "Total Deposits",
+          "$1,200.00"
+        ],
+        [
+          "Total Withdrawals",
+          "$800.00"
+        ],
+        [
+          "Ending Balance (August 31, 2025)",
+          "$2,900.00"
+        ]
+      ],
+      "confidence": 0.95,
+      "description": "Account summary",
+      "table_id": "table_1",
+      "row_count": 4,
+      "column_count": 2
+    }
+  ],
+  "extraction_metadata": {
+    "filename": "Bank Statement 1.docx",
+    "processed_at": "2025-09-23T15:55:46.228548",
+    "extractors_run": [
+      {
+        "name": "personal_data_extractor",
+        "type": "personal_data",
+        "success": true,
+        "processing_time": 3.518672,
+        "confidence": 0.2833333333333334
+      },
+      {
+        "name": "tabular_data_extractor",
+        "type": "tabular_data",
+        "success": true,
+        "processing_time": 1.734384,
+        "confidence": 0.95
+      }
+    ],
+    "total_processing_time": 5.253714,
+    "success_count": 2,
+    "error_count": 0,
+    "completed_at": "2025-09-23T15:55:51.482267"
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "extraction_summary": {
+    "total_files_processed": 1,
+    "processed_at": "2025-09-23T15:56:13.616403",
+    "extraction_types": [
+      "personalData",
+      "extraction_metadata"
+    ]
+  },
+  "personalData": [
+    {
+      "firstName": "John",
+      "confidence": 0.9
+    },
+    {
+      "lastName": "Doe",
+      "confidence": 0.9
+    },
+    {
+      "phoneNumber": "(555) 123-4567",
+      "confidence": 0.9
+    },
+    {
+      "homeAddress": "123 Main St, Anytown, USA 12345",
+      "confidence": 0.8
+    }
+  ],
+  "extraction_metadata": {
+    "filename": "Bank Statement 1.pdf",
+    "processed_at": "2025-09-23T15:56:10.899063",
+    "extractors_run": [
+      {
+        "name": "personal_data_extractor",
+        "type": "personal_data",
+        "success": true,
+        "processing_time": 2.708699,
+        "confidence": 0.2916666666666667
+      }
+    ],
+    "total_processing_time": 2.709077,
+    "success_count": 1,
+    "error_count": 0,
+    "completed_at": "2025-09-23T15:56:13.608143"
+  }
+}

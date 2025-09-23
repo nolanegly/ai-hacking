@@ -347,9 +347,6 @@ class OutputManager:
                         "file": filename,
                         "confidence": confidence
                     })
-                    # Update average confidence
-                    confidences = [inst["confidence"] for inst in existing_value_entry["instances"]]
-                    existing_value_entry["averageConfidence"] = sum(confidences) / len(confidences)
                 else:
                     # Create new value entry
                     aggregated_data[camel_case_field].append({
@@ -358,19 +355,26 @@ class OutputManager:
                             "file": filename,
                             "confidence": confidence
                         }],
-                        "averageConfidence": confidence,
                         "occurrences": 1
                     })
 
-            # Update occurrence counts for all values in this field
-            for field_name, values in aggregated_data.items():
-                for value_entry in values:
-                    value_entry["occurrences"] = len(value_entry["instances"])
+        # Update occurrence counts and calculate weighted scores for all fields
+        for field_name, values in aggregated_data.items():
+            # Update occurrence counts
+            for value_entry in values:
+                value_entry["occurrences"] = len(value_entry["instances"])
+
+            # Calculate total occurrences for this field
+            total_occurrences = sum(value_entry["occurrences"] for value_entry in values)
+
+            # Calculate weighted scores (proportion of total occurrences)
+            for value_entry in values:
+                value_entry["weightedScore"] = round(value_entry["occurrences"] / total_occurrences, 3) if total_occurrences > 0 else 0.0
 
         # Sort values by occurrence count (most common first)
         for field_name in aggregated_data:
             aggregated_data[field_name].sort(
-                key=lambda x: (x["occurrences"], x["averageConfidence"]),
+                key=lambda x: (x["occurrences"], x["weightedScore"]),
                 reverse=True
             )
 
@@ -407,7 +411,7 @@ class OutputManager:
                 summary["most_common_values"][field_name] = {
                     "value": most_common["value"],
                     "occurrences": most_common["occurrences"],
-                    "confidence": most_common["averageConfidence"]
+                    "weightedScore": most_common["weightedScore"]
                 }
 
             # Confidence analysis

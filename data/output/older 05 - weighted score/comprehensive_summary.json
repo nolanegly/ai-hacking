@@ -1,0 +1,137 @@
+{
+  "total_documents_processed": 12,
+  "processing_summary": {},
+  "extraction_types_found": [
+    "personalData",
+    "tabularData"
+  ],
+  "average_confidence_by_type": {
+    "personalData": 0.4333333333333334,
+    "tabularData": 0.9355555555555556
+  },
+  "document_summaries": {
+    "HSBC_Example_Statement.pdf": {
+      "total_extractors": 0,
+      "successful_extractors": 0,
+      "failed_extractors": 0,
+      "processing_time": 0.000124,
+      "extraction_types_found": [],
+      "average_confidence": 0.0
+    },
+    "Bank Statement 2a.docx": {
+      "total_extractors": 2,
+      "successful_extractors": 2,
+      "failed_extractors": 0,
+      "processing_time": 6.414524,
+      "extraction_types_found": [
+        "personalData",
+        "tabularData"
+      ],
+      "average_confidence": 0.6041666666666667
+    },
+    "document.txt": {
+      "total_extractors": 2,
+      "successful_extractors": 2,
+      "failed_extractors": 0,
+      "processing_time": 4.394321,
+      "extraction_types_found": [
+        "personalData",
+        "tabularData"
+      ],
+      "average_confidence": 0.65
+    },
+    "New Firm Application Sample_PAWNEE LAW FIRM PC - 2024.pdf": {
+      "total_extractors": 0,
+      "successful_extractors": 0,
+      "failed_extractors": 0,
+      "processing_time": 0.00271,
+      "extraction_types_found": [],
+      "average_confidence": 0.0
+    },
+    "Bank Statement 2.docx": {
+      "total_extractors": 2,
+      "successful_extractors": 2,
+      "failed_extractors": 0,
+      "processing_time": 8.812587,
+      "extraction_types_found": [
+        "personalData",
+        "tabularData"
+      ],
+      "average_confidence": 0.6041666666666667
+    },
+    "sample_application.txt": {
+      "total_extractors": 1,
+      "successful_extractors": 1,
+      "failed_extractors": 0,
+      "processing_time": 3.050634,
+      "extraction_types_found": [
+        "personalData"
+      ],
+      "average_confidence": 0.8916666666666667
+    },
+    "Bank Statement 1.docx": {
+      "total_extractors": 2,
+      "successful_extractors": 2,
+      "failed_extractors": 0,
+      "processing_time": 5.253714,
+      "extraction_types_found": [
+        "personalData",
+        "tabularData"
+      ],
+      "average_confidence": 0.6166666666666667
+    },
+    "financial_statement.txt": {
+      "total_extractors": 2,
+      "successful_extractors": 2,
+      "failed_extractors": 0,
+      "processing_time": 9.498946,
+      "extraction_types_found": [
+        "personalData",
+        "tabularData"
+      ],
+      "average_confidence": 0.9275
+    },
+    "nje bank statement 01.docx": {
+      "total_extractors": 1,
+      "successful_extractors": 1,
+      "failed_extractors": 0,
+      "processing_time": 1.937834,
+      "extraction_types_found": [
+        "personalData"
+      ],
+      "average_confidence": 0.44166666666666665
+    },
+    "Bank Statement 2b.docx": {
+      "total_extractors": 2,
+      "successful_extractors": 2,
+      "failed_extractors": 0,
+      "processing_time": 5.352809,
+      "extraction_types_found": [
+        "personalData",
+        "tabularData"
+      ],
+      "average_confidence": 0.6166666666666667
+    },
+    "Bank Statement 2.pdf": {
+      "total_extractors": 1,
+      "successful_extractors": 1,
+      "failed_extractors": 0,
+      "processing_time": 2.622239,
+      "extraction_types_found": [
+        "personalData"
+      ],
+      "average_confidence": 0.2833333333333334
+    },
+    "Bank Statement 1.pdf": {
+      "total_extractors": 1,
+      "successful_extractors": 1,
+      "failed_extractors": 0,
+      "processing_time": 2.709077,
+      "extraction_types_found": [
+        "personalData"
+      ],
+      "average_confidence": 0.2916666666666667
+    }
+  },
+  "overall_average_confidence": 0.6216666666666667
+}

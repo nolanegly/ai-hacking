@@ -1,0 +1,107 @@
+{
+  "extraction_summary": {
+    "total_files_processed": 1,
+    "processed_at": "2025-09-23T15:56:13.610394",
+    "extraction_types": [
+      "personalData",
+      "tabularData",
+      "extraction_metadata"
+    ]
+  },
+  "personalData": [
+    {
+      "firstName": "Bob",
+      "confidence": 0.9
+    },
+    {
+      "lastName": "Smith",
+      "confidence": 0.9
+    },
+    {
+      "phoneNumber": "(555) 333-4444",
+      "confidence": 0.9
+    },
+    {
+      "emailAddress": "bob@example.com",
+      "confidence": 0.9
+    },
+    {
+      "homeAddress": "321 Oak Avenue, Town, State 54321",
+      "confidence": 0.9
+    }
+  ],
+  "tabularData": [
+    {
+      "dataType": "expense_report",
+      "headers": [
+        "Category",
+        "Amount"
+      ],
+      "data": [
+        [
+          "Rent",
+          "$1,200"
+        ],
+        [
+          "Food",
+          "$400"
+        ],
+        [
+          "Utilities",
+          "$150"
+        ]
+      ],
+      "confidence": 0.9,
+      "description": "Expense report",
+      "table_id": "table_1",
+      "row_count": 3,
+      "column_count": 2
+    },
+    {
+      "dataType": "personal_info",
+      "headers": [
+        "Name",
+        "Phone",
+        "Email",
+        "Address"
+      ],
+      "data": [
+        [
+          "Bob Smith",
+          "(555) 333-4444",
+          "bob@example.com",
+          "321 Oak Avenue, Town, State 54321"
+        ]
+      ],
+      "confidence": 0.95,
+      "description": "Personal information",
+      "table_id": "table_2",
+      "row_count": 1,
+      "column_count": 4
+    }
+  ],
+  "extraction_metadata": {
+    "filename": "document.txt",
+    "processed_at": "2025-09-23T15:55:29.966727",
+    "extractors_run": [
+      {
+        "name": "personal_data_extractor",
+        "type": "personal_data",
+        "success": true,
+        "processing_time": 2.536995,
+        "confidence": 0.375
+      },
+      {
+        "name": "tabular_data_extractor",
+        "type": "tabular_data",
+        "success": true,
+        "processing_time": 1.856705,
+        "confidence": 0.925
+      }
+    ],
+    "total_processing_time": 4.394321,
+    "success_count": 2,
+    "error_count": 0,
+    "completed_at": "2025-09-23T15:55:34.361052"
+  }
+}

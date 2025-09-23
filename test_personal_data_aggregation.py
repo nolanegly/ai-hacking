@@ -109,8 +109,30 @@ def test_personal_data_aggregation():
         else:
             print(f"❌ John occurrence count wrong: {john_entry['occurrences']}")
             return False
+
+        # Test weighted score (John: 2 occurrences, Jane: 1 occurrence, total: 3)
+        # John's weighted score should be 2/3 = 0.667
+        expected_weighted_score = round(2/3, 3)
+        if abs(john_entry["weightedScore"] - expected_weighted_score) < 0.001:
+            print(f"✅ John weighted score correct: {john_entry['weightedScore']}")
+        else:
+            print(f"❌ John weighted score wrong. Expected: {expected_weighted_score}, Got: {john_entry['weightedScore']}")
+            return False
     else:
         print("❌ John entry not found in aggregation")
+        return False
+
+    # Test Jane's weighted score (1/3 = 0.333)
+    jane_entry = next((entry for entry in first_name_data if entry["value"] == "Jane"), None)
+    if jane_entry:
+        expected_jane_weighted_score = round(1/3, 3)
+        if abs(jane_entry["weightedScore"] - expected_jane_weighted_score) < 0.001:
+            print(f"✅ Jane weighted score correct: {jane_entry['weightedScore']}")
+        else:
+            print(f"❌ Jane weighted score wrong. Expected: {expected_jane_weighted_score}, Got: {jane_entry['weightedScore']}")
+            return False
+    else:
+        print("❌ Jane entry not found in aggregation")
         return False
 
     # Test summary statistics
@@ -176,7 +198,7 @@ if __name__ == "__main__":
         print("• Cross-document value aggregation")
         print("• File instance tracking")
         print("• Inconsistency detection")
-        print("• Confidence averaging")
+        print("• Weighted score calculation")
         print("• Summary statistics generation")
 
         print("\nExample aggregation output:")
@@ -189,7 +211,7 @@ if __name__ == "__main__":
         {"file": "document2.txt", "confidence": 0.95}
       ],
       "occurrences": 2,
-      "averageConfidence": 0.925
+      "weightedScore": 0.667
     },
     {
       "value": "Jane",
@@ -197,7 +219,7 @@ if __name__ == "__main__":
         {"file": "document3.docx", "confidence": 0.92}
       ],
       "occurrences": 1,
-      "averageConfidence": 0.92
+      "weightedScore": 0.333
     }
   ]
 }''')

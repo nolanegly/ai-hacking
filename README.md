@@ -181,6 +181,11 @@ The personal data section uses camelCase field names and only includes fields wh
 - Confidence score included for each field
 - Clean, structured format for easy parsing
 
+**Aggregation Features:**
+- **Weighted Score**: Calculated as `occurrences / total_occurrences_for_field`
+- **Instance Tracking**: Records which files contain each value
+- **Occurrence Counting**: Shows frequency of each value across documents
+
 ### **Tabular Data Types**
 The tabular data extractor automatically classifies tables into types such as:
 - `financial_data` - Account balances, transactions, etc.
@@ -214,7 +219,7 @@ The `--aggregate` flag generates a comprehensive cross-document analysis that id
           {"file": "document2.txt", "confidence": 0.95}
         ],
         "occurrences": 2,
-        "averageConfidence": 0.925
+        "weightedScore": 0.667
       },
       {
         "value": "Jane",
@@ -222,7 +227,7 @@ The `--aggregate` flag generates a comprehensive cross-document analysis that id
           {"file": "bank_statement.docx", "confidence": 0.92}
         ],
         "occurrences": 1,
-        "averageConfidence": 0.92
+        "weightedScore": 0.333
       }
     ],
     "phoneNumber": [
@@ -232,7 +237,7 @@ The `--aggregate` flag generates a comprehensive cross-document analysis that id
           {"file": "document1.pdf", "confidence": 0.85}
         ],
         "occurrences": 1,
-        "averageConfidence": 0.85
+        "weightedScore": 0.5
       },
       {
         "value": "(555) 987-6543",
@@ -240,7 +245,7 @@ The `--aggregate` flag generates a comprehensive cross-document analysis that id
           {"file": "document2.txt", "confidence": 0.9}
         ],
         "occurrences": 1,
-        "averageConfidence": 0.9
+        "weightedScore": 0.5
       }
     ]
   },
@@ -260,7 +265,7 @@ The `--aggregate` flag generates a comprehensive cross-document analysis that id
       }
     ],
     "most_common_values": {
-      "firstName": {"value": "John", "occurrences": 2, "confidence": 0.925}
+      "firstName": {"value": "John", "occurrences": 2, "weightedScore": 0.667}
     }
   }
 }
