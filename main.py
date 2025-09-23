@@ -163,8 +163,9 @@ Examples:
         saved_files = []
 
         for filename, results in all_results.items():
-            # Create filename for this document's results
-            base_name = Path(filename).stem
+            # Create filename for this document's results - include extension to avoid conflicts
+            file_path = Path(filename)
+            base_name = f"{file_path.stem}_{file_path.suffix[1:]}" if file_path.suffix else file_path.stem
             output_filename = f"{base_name}_extraction_results.json" if not args.output_file else args.output_file
 
             results_file = output_manager.save_extraction_results(

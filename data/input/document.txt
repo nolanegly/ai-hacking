@@ -1,0 +1,12 @@
+TEXT DOCUMENT CONTENT
+
+Name: Bob Smith
+Phone: (555) 333-4444
+Email: bob@example.com
+Address: 321 Oak Avenue, Town, State 54321
+
+Expense Report:
+Category        Amount
+Rent            $1,200
+Food            $400
+Utilities       $150

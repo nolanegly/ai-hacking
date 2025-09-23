@@ -1,0 +1,77 @@
+{
+  "extraction_summary": {
+    "total_files_processed": 1,
+    "processed_at": "2025-09-23T14:29:45.997428",
+    "extraction_types": [
+      "personalData",
+      "extraction_metadata"
+    ]
+  },
+  "personalData": [
+    {
+      "record": "First name: John",
+      "confidence": 0.9
+    },
+    {
+      "record": "Last name: Doe",
+      "confidence": 0.9
+    },
+    {
+      "record": "Middle name: Not found",
+      "confidence": 0.0
+    },
+    {
+      "record": "Date of birth: Not found",
+      "confidence": 0.0
+    },
+    {
+      "record": "Social Security Number: Not found",
+      "confidence": 0.0
+    },
+    {
+      "record": "Phone number: (555) 123-4567",
+      "confidence": 0.9
+    },
+    {
+      "record": "Email address: Not found",
+      "confidence": 0.0
+    },
+    {
+      "record": "Home address: 123 Main St, Anytown, USA 12345",
+      "confidence": 0.8
+    },
+    {
+      "record": "Employment status: Not found",
+      "confidence": 0.0
+    },
+    {
+      "record": "Annual income: Not found",
+      "confidence": 0.0
+    },
+    {
+      "record": "Employer name: Not found",
+      "confidence": 0.0
+    },
+    {
+      "record": "Job title: Not found",
+      "confidence": 0.0
+    }
+  ],
+  "extraction_metadata": {
+    "filename": "Bank Statement 1.pdf",
+    "processed_at": "2025-09-23T14:29:43.051527",
+    "extractors_run": [
+      {
+        "name": "personal_data_extractor",
+        "type": "personal_data",
+        "success": true,
+        "processing_time": 2.937713,
+        "confidence": 0.2916666666666667
+      }
+    ],
+    "total_processing_time": 2.93818,
+    "success_count": 1,
+    "error_count": 0,
+    "completed_at": "2025-09-23T14:29:45.989714"
+  }
+}

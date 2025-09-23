@@ -21,6 +21,7 @@ A Python AI agent that uses Claude to extract multiple types of data from docume
 - **Confidence Scoring**: Each extraction includes confidence levels
 - **Structured Output**: JSON format with separate sections for each data type
 - **Comprehensive Reporting**: Built-in validation and summary reports
+- **Smart File Handling**: Prevents overwrites when files have same name but different extensions
 - **CLI Interface**: Command-line interface for easy automation
 
 ## Installation
@@ -239,6 +240,14 @@ The agent creates logs in `extraction_agent.log` with detailed processing inform
 - Individual document processing errors don't stop the entire batch
 - Comprehensive error logging for troubleshooting
 - Graceful handling of unsupported file formats
+
+## File Handling
+
+- **No Overwrites**: Files with same name but different extensions generate unique outputs
+  - `document.pdf` → `document_pdf_results.json`
+  - `document.txt` → `document_txt_results.json`
+- **Batch Processing**: Multiple documents processed in sequence
+- **Individual Outputs**: Each document gets its own results file
 
 ## Requirements
 
