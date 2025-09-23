@@ -66,12 +66,12 @@ class OutputManager:
             formatted_record = f"{result['field_name']}: {result['field_value']}"
 
             record_data = {
-                "record": formatted_record
+                "record": formatted_record,
+                "confidence": result.get("confidence", 0.0)
             }
 
             if include_metadata:
                 record_data.update({
-                    "confidence": result.get("confidence", 0.0),
                     "extracted_at": result.get("extracted_at", "")
                 })
 

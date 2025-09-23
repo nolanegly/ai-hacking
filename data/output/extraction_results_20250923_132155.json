@@ -1,0 +1,459 @@
+{
+  "extraction_summary": {
+    "total_files_processed": 9,
+    "total_records": 108,
+    "processed_at": "2025-09-23T13:21:55.414828"
+  },
+  "results": {
+    "HSBC_Example_Statement.pdf": [
+      {
+        "record": "First name: John",
+        "confidence": 0.8
+      },
+      {
+        "record": "Last name: Doe",
+        "confidence": 0.8
+      },
+      {
+        "record": "Middle name: Not found",
+        "confidence": 0.0
+      },
+      {
+        "record": "Date of birth: 1985-06-15",
+        "confidence": 0.9
+      },
+      {
+        "record": "Social Security Number: 123-45-6789",
+        "confidence": 0.9
+      },
+      {
+        "record": "Phone number: 555-1234567",
+        "confidence": 0.9
+      },
+      {
+        "record": "Email address: john.doe@example.com",
+        "confidence": 0.9
+      },
+      {
+        "record": "Home address: 123 Main St, Anytown USA 12345",
+        "confidence": 0.8
+      },
+      {
+        "record": "Employment status: Employed",
+        "confidence": 0.8
+      },
+      {
+        "record": "Annual income: 75000",
+        "confidence": 0.8
+      },
+      {
+        "record": "Employer name: ABC Corporation",
+        "confidence": 0.8
+      },
+      {
+        "record": "Job title: Software Engineer",
+        "confidence": 0.8
+      }
+    ],
+    "Bank Statement 2a.docx": [
+      {
+        "record": "First name: Jane",
+        "confidence": 0.8
+      },
+      {
+        "record": "Last name: Goodall",
+        "confidence": 0.8
+      },
+      {
+        "record": "Middle name: Not found",
+        "confidence": 0.0
+      },
+      {
+        "record": "Date of birth: Not found",
+        "confidence": 0.0
+      },
+      {
+        "record": "Social Security Number: Not found",
+        "confidence": 0.0
+      },
+      {
+        "record": "Phone number: Not found",
+        "confidence": 0.0
+      },
+      {
+        "record": "Email address: Not found",
+        "confidence": 0.0
+      },
+      {
+        "record": "Home address: Not found",
+        "confidence": 0.0
+      },
+      {
+        "record": "Employment status: Not found",
+        "confidence": 0.0
+      },
+      {
+        "record": "Annual income: Not found",
+        "confidence": 0.0
+      },
+      {
+        "record": "Employer name: Not found",
+        "confidence": 0.0
+      },
+      {
+        "record": "Job title: Not found",
+        "confidence": 0.0
+      }
+    ],
+    "New Firm Application Sample_PAWNEE LAW FIRM PC - 2024.pdf": [
+      {
+        "record": "First name: Not found",
+        "confidence": 0.0
+      },
+      {
+        "record": "Last name: Not found",
+        "confidence": 0.0
+      },
+      {
+        "record": "Middle name: Not found",
+        "confidence": 0.0
+      },
+      {
+        "record": "Date of birth: Not found",
+        "confidence": 0.0
+      },
+      {
+        "record": "Social Security Number: Not found",
+        "confidence": 0.0
+      },
+      {
+        "record": "Phone number: Not found",
+        "confidence": 0.0
+      },
+      {
+        "record": "Email address: Not found",
+        "confidence": 0.0
+      },
+      {
+        "record": "Home address: Not found",
+        "confidence": 0.0
+      },
+      {
+        "record": "Employment status: Not found",
+        "confidence": 0.0
+      },
+      {
+        "record": "Annual income: Not found",
+        "confidence": 0.0
+      },
+      {
+        "record": "Employer name: Not found",
+        "confidence": 0.0
+      },
+      {
+        "record": "Job title: Not found",
+        "confidence": 0.0
+      }
+    ],
+    "Bank Statement 2.docx": [
+      {
+        "record": "First name: Jane",
+        "confidence": 0.8
+      },
+      {
+        "record": "Last name: Goodall",
+        "confidence": 0.8
+      },
+      {
+        "record": "Middle name: Not found",
+        "confidence": 0.0
+      },
+      {
+        "record": "Date of birth: Not found",
+        "confidence": 0.0
+      },
+      {
+        "record": "Social Security Number: Not found",
+        "confidence": 0.0
+      },
+      {
+        "record": "Phone number: Not found",
+        "confidence": 0.0
+      },
+      {
+        "record": "Email address: Not found",
+        "confidence": 0.0
+      },
+      {
+        "record": "Home address: Not found",
+        "confidence": 0.0
+      },
+      {
+        "record": "Employment status: Not found",
+        "confidence": 0.0
+      },
+      {
+        "record": "Annual income: Not found",
+        "confidence": 0.0
+      },
+      {
+        "record": "Employer name: Not found",
+        "confidence": 0.0
+      },
+      {
+        "record": "Job title: Not found",
+        "confidence": 0.0
+      }
+    ],
+    "Bank Statement 1.docx": [
+      {
+        "record": "First name: John",
+        "confidence": 0.8
+      },
+      {
+        "record": "Last name: Doe",
+        "confidence": 0.8
+      },
+      {
+        "record": "Middle name: Not found",
+        "confidence": 0.0
+      },
+      {
+        "record": "Date of birth: Not found",
+        "confidence": 0.0
+      },
+      {
+        "record": "Social Security Number: Not found",
+        "confidence": 0.0
+      },
+      {
+        "record": "Phone number: Not found",
+        "confidence": 0.0
+      },
+      {
+        "record": "Email address: Not found",
+        "confidence": 0.0
+      },
+      {
+        "record": "Home address: Not found",
+        "confidence": 0.0
+      },
+      {
+        "record": "Employment status: Not found",
+        "confidence": 0.0
+      },
+      {
+        "record": "Annual income: Not found",
+        "confidence": 0.0
+      },
+      {
+        "record": "Employer name: Not found",
+        "confidence": 0.0
+      },
+      {
+        "record": "Job title: Not found",
+        "confidence": 0.0
+      }
+    ],
+    "nje bank statement 01.docx": [
+      {
+        "record": "First name: John",
+        "confidence": 0.8
+      },
+      {
+        "record": "Last name: Smith",
+        "confidence": 0.8
+      },
+      {
+        "record": "Middle name: A.",
+        "confidence": 0.8
+      },
+      {
+        "record": "Date of birth: Not found",
+        "confidence": 0.0
+      },
+      {
+        "record": "Social Security Number: Not found",
+        "confidence": 0.0
+      },
+      {
+        "record": "Phone number: (217) 555-1234",
+        "confidence": 0.9
+      },
+      {
+        "record": "Email address: john.smith@email.com",
+        "confidence": 0.9
+      },
+      {
+        "record": "Home address: 123 Maple Street, Springfield, IL 62704",
+        "confidence": 0.8
+      },
+      {
+        "record": "Employment status: Not found",
+        "confidence": 0.0
+      },
+      {
+        "record": "Annual income: Not found",
+        "confidence": 0.0
+      },
+      {
+        "record": "Employer name: Not found",
+        "confidence": 0.0
+      },
+      {
+        "record": "Job title: Not found",
+        "confidence": 0.0
+      }
+    ],
+    "Bank Statement 2b.docx": [
+      {
+        "record": "First name: Jane",
+        "confidence": 0.8
+      },
+      {
+        "record": "Last name: Goodall",
+        "confidence": 0.8
+      },
+      {
+        "record": "Middle name: Not found",
+        "confidence": 0.0
+      },
+      {
+        "record": "Date of birth: Not found",
+        "confidence": 0.0
+      },
+      {
+        "record": "Social Security Number: Not found",
+        "confidence": 0.0
+      },
+      {
+        "record": "Phone number: Not found",
+        "confidence": 0.0
+      },
+      {
+        "record": "Email address: Not found",
+        "confidence": 0.0
+      },
+      {
+        "record": "Home address: Not found",
+        "confidence": 0.0
+      },
+      {
+        "record": "Employment status: Not found",
+        "confidence": 0.0
+      },
+      {
+        "record": "Annual income: Not found",
+        "confidence": 0.0
+      },
+      {
+        "record": "Employer name: Not found",
+        "confidence": 0.0
+      },
+      {
+        "record": "Job title: Not found",
+        "confidence": 0.0
+      }
+    ],
+    "Bank Statement 2.pdf": [
+      {
+        "record": "First name: Jane",
+        "confidence": 0.8
+      },
+      {
+        "record": "Last name: Smith",
+        "confidence": 0.8
+      },
+      {
+        "record": "Middle name: Not found",
+        "confidence": 0.0
+      },
+      {
+        "record": "Date of birth: Not found",
+        "confidence": 0.0
+      },
+      {
+        "record": "Social Security Number: Not found",
+        "confidence": 0.0
+      },
+      {
+        "record": "Phone number: Not found",
+        "confidence": 0.0
+      },
+      {
+        "record": "Email address: Not found",
+        "confidence": 0.0
+      },
+      {
+        "record": "Home address: Not found",
+        "confidence": 0.0
+      },
+      {
+        "record": "Employment status: Not found",
+        "confidence": 0.0
+      },
+      {
+        "record": "Annual income: Not found",
+        "confidence": 0.0
+      },
+      {
+        "record": "Employer name: Not found",
+        "confidence": 0.0
+      },
+      {
+        "record": "Job title: Not found",
+        "confidence": 0.0
+      }
+    ],
+    "Bank Statement 1.pdf": [
+      {
+        "record": "First name: John",
+        "confidence": 0.8
+      },
+      {
+        "record": "Last name: Doe",
+        "confidence": 0.8
+      },
+      {
+        "record": "Middle name: Not found",
+        "confidence": 0.0
+      },
+      {
+        "record": "Date of birth: Not found",
+        "confidence": 0.0
+      },
+      {
+        "record": "Social Security Number: Not found",
+        "confidence": 0.0
+      },
+      {
+        "record": "Phone number: (555) 123-4567",
+        "confidence": 0.9
+      },
+      {
+        "record": "Email address: Not found",
+        "confidence": 0.0
+      },
+      {
+        "record": "Home address: 123 Main St, Anytown, USA 12345",
+        "confidence": 0.8
+      },
+      {
+        "record": "Employment status: Not found",
+        "confidence": 0.0
+      },
+      {
+        "record": "Annual income: Not found",
+        "confidence": 0.0
+      },
+      {
+        "record": "Employer name: Not found",
+        "confidence": 0.0
+      },
+      {
+        "record": "Job title: Not found",
+        "confidence": 0.0
+      }
+    ]
+  }
+}
