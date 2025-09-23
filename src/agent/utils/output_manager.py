@@ -18,7 +18,7 @@ class OutputManager:
         self.logger = logging.getLogger(__name__)
 
     def save_extraction_results(self,
-                               results: List[Dict[str, str]],
+                               results,
                                filename: str = None,
                                include_metadata: bool = True) -> str:
         """
@@ -52,9 +52,60 @@ class OutputManager:
             self.logger.error(f"Failed to save results: {str(e)}")
             raise
 
-    def _format_results(self, results: List[Dict[str, str]], include_metadata: bool) -> Dict[str, Any]:
-        """Format results according to the required output structure."""
+    def _format_results(self, results: Dict[str, Any], include_metadata: bool) -> Dict[str, Any]:
+        """Format results according to the new modular extraction structure."""
 
+        # Handle both old format (list of records) and new format (pipeline results)
+        if isinstance(results, list):
+            # Legacy format - convert to new format
+            return self._format_legacy_results(results, include_metadata)
+
+        # New modular format
+        output_data = {
+            "extraction_summary": {
+                "total_files_processed": 1,
+                "processed_at": datetime.now().isoformat(),
+                "extraction_types": list(results.keys())
+            }
+        }
+
+        # Format personal data if present
+        if "personalData" in results:
+            personal_data = results["personalData"]["data"]
+            formatted_personal = []
+
+            for record in personal_data:
+                formatted_record = {
+                    "record": f"{record['field_name']}: {record['field_value']}",
+                    "confidence": record.get("confidence", 0.0)
+                }
+
+                if include_metadata:
+                    formatted_record["field_name"] = record["field_name"]
+                    formatted_record["extracted_at"] = results["personalData"].get("extracted_at", "")
+
+                formatted_personal.append(formatted_record)
+
+            output_data["personalData"] = formatted_personal
+
+        # Format tabular data if present
+        if "tabularData" in results:
+            tabular_data = results["tabularData"]["data"]
+            output_data["tabularData"] = tabular_data
+
+        # Add extraction metadata if present
+        if "extraction_metadata" in results:
+            output_data["extraction_metadata"] = results["extraction_metadata"]
+
+        # Include any other extraction types
+        for key, value in results.items():
+            if key not in ["personalData", "tabularData", "extraction_metadata"]:
+                output_data[key] = value
+
+        return output_data
+
+    def _format_legacy_results(self, results: List[Dict[str, str]], include_metadata: bool) -> Dict[str, Any]:
+        """Format legacy results format for backward compatibility."""
         # Group results by source file
         files_data = {}
         for result in results:

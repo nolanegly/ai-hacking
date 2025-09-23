@@ -1,0 +1,183 @@
+{
+  "extraction_summary": {
+    "total_files_processed": 1,
+    "processed_at": "2025-09-23T14:13:35.262328",
+    "extraction_types": [
+      "personalData",
+      "tabularData",
+      "extraction_metadata"
+    ]
+  },
+  "personalData": [
+    {
+      "record": "First name: Jane",
+      "confidence": 0.9
+    },
+    {
+      "record": "Last name: Goodall",
+      "confidence": 0.9
+    },
+    {
+      "record": "Middle name: Not found",
+      "confidence": 0.0
+    },
+    {
+      "record": "Date of birth: Not found",
+      "confidence": 0.0
+    },
+    {
+      "record": "Social Security Number: Not found",
+      "confidence": 0.0
+    },
+    {
+      "record": "Phone number: (555) 987-7777",
+      "confidence": 0.8
+    },
+    {
+      "record": "Email address: Not found",
+      "confidence": 0.0
+    },
+    {
+      "record": "Home address: 432 Elm St, Othertown, USA 67890",
+      "confidence": 0.8
+    },
+    {
+      "record": "Employment status: Employed",
+      "confidence": 0.7
+    },
+    {
+      "record": "Annual income: $1,500.00",
+      "confidence": 0.7
+    },
+    {
+      "record": "Employer name: Not found",
+      "confidence": 0.0
+    },
+    {
+      "record": "Job title: Not found",
+      "confidence": 0.0
+    }
+  ],
+  "tabularData": [
+    {
+      "dataType": "financial_data",
+      "headers": [
+        "Date",
+        "Description",
+        "Withdrawals",
+        "Deposits",
+        "Balance"
+      ],
+      "data": [
+        [
+          "09/01/2025",
+          "Beginning Balance",
+          "",
+          "",
+          "$3,000.00"
+        ],
+        [
+          "09/05/2025",
+          "Direct Deposit - Salary",
+          "",
+          "$1,500.00",
+          "$4,500.00"
+        ],
+        [
+          "09/10/2025",
+          "Rent Payment",
+          "$1,200.00",
+          "",
+          "$3,300.00"
+        ],
+        [
+          "09/15/2025",
+          "Coffee Shop",
+          "$25.00",
+          "",
+          "$3,275.00"
+        ],
+        [
+          "09/20/2025",
+          "Grocery Store",
+          "$150.00",
+          "",
+          "$3,125.00"
+        ],
+        [
+          "09/25/2025",
+          "Online Purchase",
+          "$50.00",
+          "",
+          "$3,075.00"
+        ],
+        [
+          "09/30/2025",
+          "Interest Earned",
+          "",
+          "$5.00",
+          "$3,080.00"
+        ]
+      ],
+      "confidence": 0.95,
+      "description": "Monthly financial transactions",
+      "table_id": "table_1",
+      "row_count": 7,
+      "column_count": 5
+    },
+    {
+      "dataType": "unknown",
+      "headers": [
+        "",
+        "Amount"
+      ],
+      "data": [
+        [
+          "Beginning Balance (September 1, 2025)",
+          "$3,000.00"
+        ],
+        [
+          "Total Deposits",
+          "$1,500.00"
+        ],
+        [
+          "Total Withdrawals",
+          "$1,200.00"
+        ],
+        [
+          "Ending Balance (September 30, 2025)",
+          "$3,500.00"
+        ]
+      ],
+      "confidence": 0.9,
+      "description": "Account summary",
+      "table_id": "table_2",
+      "row_count": 4,
+      "column_count": 2
+    }
+  ],
+  "extraction_metadata": {
+    "filename": "Bank Statement 2b.docx",
+    "processed_at": "2025-09-23T14:13:24.048595",
+    "extractors_run": [
+      {
+        "name": "personal_data_extractor",
+        "type": "personal_data",
+        "success": true,
+        "processing_time": 2.662117,
+        "confidence": 0.39999999999999997
+      },
+      {
+        "name": "tabular_data_extractor",
+        "type": "tabular_data",
+        "success": true,
+        "processing_time": 3.022871,
+        "confidence": 0.925
+      }
+    ],
+    "total_processing_time": 5.685627,
+    "success_count": 2,
+    "error_count": 0,
+    "completed_at": "2025-09-23T14:13:29.734224"
+  }
+}

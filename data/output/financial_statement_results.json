@@ -1,0 +1,286 @@
+{
+  "extraction_summary": {
+    "total_files_processed": 1,
+    "processed_at": "2025-09-23T14:13:35.261240",
+    "extraction_types": [
+      "personalData",
+      "tabularData",
+      "extraction_metadata"
+    ]
+  },
+  "personalData": [
+    {
+      "record": "First name: Sarah",
+      "confidence": 1.0
+    },
+    {
+      "record": "Last name: Johnson",
+      "confidence": 1.0
+    },
+    {
+      "record": "Middle name: Not found",
+      "confidence": 0.0
+    },
+    {
+      "record": "Date of birth: 08/22/1988",
+      "confidence": 1.0
+    },
+    {
+      "record": "Social Security Number: 987-65-4321",
+      "confidence": 1.0
+    },
+    {
+      "record": "Phone number: (217) 555-9876",
+      "confidence": 1.0
+    },
+    {
+      "record": "Email address: sarah.johnson@email.com",
+      "confidence": 1.0
+    },
+    {
+      "record": "Home address: 456 Oak Avenue, Springfield, IL 62701",
+      "confidence": 1.0
+    },
+    {
+      "record": "Employment status: Full-time",
+      "confidence": 1.0
+    },
+    {
+      "record": "Annual income: $95,000",
+      "confidence": 1.0
+    },
+    {
+      "record": "Employer name: TechCorp Solutions",
+      "confidence": 1.0
+    },
+    {
+      "record": "Job title: Senior Software Developer",
+      "confidence": 1.0
+    }
+  ],
+  "tabularData": [
+    {
+      "dataType": "asset_list",
+      "headers": [
+        "Asset Type",
+        "Current Value",
+        "Date Acquired"
+      ],
+      "data": [
+        [
+          "Checking Account",
+          "$8,500",
+          "01/2020"
+        ],
+        [
+          "Savings Account",
+          "$25,000",
+          "03/2019"
+        ],
+        [
+          "401(k) Account",
+          "$45,000",
+          "06/2018"
+        ],
+        [
+          "Stock Portfolio",
+          "$15,000",
+          "09/2021"
+        ],
+        [
+          "Primary Residence",
+          "$250,000",
+          "05/2020"
+        ],
+        [
+          "Vehicle (2019 Honda)",
+          "$18,000",
+          "03/2019"
+        ]
+      ],
+      "confidence": 0.95,
+      "description": "List of personal assets",
+      "table_id": "table_1",
+      "row_count": 6,
+      "column_count": 3
+    },
+    {
+      "dataType": "expense_report",
+      "headers": [
+        "Category",
+        "Amount"
+      ],
+      "data": [
+        [
+          "Mortgage Payment",
+          "$1,800"
+        ],
+        [
+          "Car Payment",
+          "$350"
+        ],
+        [
+          "Insurance",
+          "$200"
+        ],
+        [
+          "Utilities",
+          "$150"
+        ],
+        [
+          "Groceries",
+          "$400"
+        ],
+        [
+          "Entertainment",
+          "$300"
+        ],
+        [
+          "Other",
+          "$200"
+        ]
+      ],
+      "confidence": 0.92,
+      "description": "Monthly personal expenses",
+      "table_id": "table_2",
+      "row_count": 7,
+      "column_count": 2
+    },
+    {
+      "dataType": "liability_list",
+      "headers": [
+        "Account Type",
+        "Balance",
+        "Credit Limit",
+        "Monthly Payment"
+      ],
+      "data": [
+        [
+          "Credit Card A",
+          "$2,500",
+          "$10,000",
+          "$150"
+        ],
+        [
+          "Credit Card B",
+          "$800",
+          "$5,000",
+          "$50"
+        ],
+        [
+          "Personal Loan",
+          "$8,000",
+          "N/A",
+          "$300"
+        ]
+      ],
+      "confidence": 0.93,
+      "description": "List of personal liabilities",
+      "table_id": "table_3",
+      "row_count": 3,
+      "column_count": 4
+    },
+    {
+      "dataType": "contact_list",
+      "headers": [
+        "Name",
+        "Phone",
+        "Relationship"
+      ],
+      "data": [
+        [
+          "Michael Davis",
+          "(217) 555-1111",
+          "Supervisor"
+        ],
+        [
+          "Lisa Brown",
+          "(217) 555-2222",
+          "Colleague"
+        ],
+        [
+          "Robert Wilson",
+          "(217) 555-3333",
+          "Friend"
+        ]
+      ],
+      "confidence": 0.9,
+      "description": "List of personal references",
+      "table_id": "table_4",
+      "row_count": 3,
+      "column_count": 3
+    },
+    {
+      "dataType": "personal_info",
+      "headers": [
+        "Name",
+        "Date of Birth",
+        "SSN",
+        "Address",
+        "Phone",
+        "Email"
+      ],
+      "data": [
+        [
+          "Sarah Johnson",
+          "08/22/1988",
+          "987-65-4321",
+          "456 Oak Avenue, Springfield, IL 62701",
+          "(217) 555-9876",
+          "sarah.johnson@email.com"
+        ]
+      ],
+      "confidence": 0.98,
+      "description": "Applicant personal information",
+      "table_id": "table_5",
+      "row_count": 1,
+      "column_count": 6
+    },
+    {
+      "dataType": "unknown",
+      "headers": [
+        "Employer",
+        "Job Title",
+        "Employment Status",
+        "Annual Salary"
+      ],
+      "data": [
+        [
+          "TechCorp Solutions",
+          "Senior Software Developer",
+          "Full-time",
+          "$95,000"
+        ]
+      ],
+      "confidence": 0.95,
+      "description": "Applicant employment details",
+      "table_id": "table_6",
+      "row_count": 1,
+      "column_count": 4
+    }
+  ],
+  "extraction_metadata": {
+    "filename": "financial_statement.txt",
+    "processed_at": "2025-09-23T14:13:12.701170",
+    "extractors_run": [
+      {
+        "name": "personal_data_extractor",
+        "type": "personal_data",
+        "success": true,
+        "processing_time": 3.351528,
+        "confidence": 0.9166666666666666
+      },
+      {
+        "name": "tabular_data_extractor",
+        "type": "tabular_data",
+        "success": true,
+        "processing_time": 5.897539,
+        "confidence": 0.9383333333333334
+      }
+    ],
+    "total_processing_time": 9.249958,
+    "success_count": 2,
+    "error_count": 0,
+    "completed_at": "2025-09-23T14:13:21.951145"
+  }
+}

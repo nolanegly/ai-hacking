@@ -14,7 +14,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent / "src"))
 
 from agent.core.agent import DocumentExtractionAgent
-from agent.core.extractor import PersonalDataExtractor
+from agent.core.extraction_pipeline import ExtractionPipeline
 from agent.utils.document_processor import DocumentProcessor
 from agent.utils.output_manager import OutputManager
 
@@ -105,14 +105,21 @@ Examples:
 
     try:
         # Initialize components
-        logger.info("Initializing Document Extraction Agent...")
+        logger.info("Initializing Document Extraction Agent with modular pipeline...")
 
         agent = DocumentExtractionAgent(api_key=args.api_key)
         agent.set_model_config(model=args.model)
 
         doc_processor = DocumentProcessor()
-        extractor = PersonalDataExtractor(agent.client)
+        extraction_pipeline = ExtractionPipeline(agent.client)
+        extraction_pipeline.set_model_config_all(model=args.model)
         output_manager = OutputManager(args.output_dir)
+
+        # Log available extractors
+        extractors_info = extraction_pipeline.list_extractors()
+        logger.info(f"Loaded {len(extractors_info)} extractors:")
+        for extractor_info in extractors_info:
+            logger.info(f"  - {extractor_info['name']}: {extractor_info['description']}")
 
         # Process documents
         logger.info(f"Processing documents from: {args.input_dir}")
@@ -124,21 +131,24 @@ Examples:
 
         logger.info(f"Found {len(documents)} documents to process")
 
-        all_results = []
+        all_results = {}
 
         # Process each document
         for doc in documents:
             logger.info(f"Processing: {doc['filename']}")
 
             try:
-                # Extract data directly using Claude through the extractor
-                formatted_results = extractor.extract_from_document(
+                # Extract data using the modular extraction pipeline
+                extraction_results = extraction_pipeline.process_document(
                     doc['content'],
                     doc['filename']
                 )
 
-                all_results.extend(formatted_results)
-                logger.info(f"Successfully processed {doc['filename']} - extracted {len(formatted_results)} fields")
+                all_results[doc['filename']] = extraction_results
+
+                # Log summary
+                summary = extraction_pipeline.get_extraction_summary(extraction_results)
+                logger.info(f"Successfully processed {doc['filename']} - found {len(summary['extraction_types_found'])} data types")
 
             except Exception as e:
                 logger.error(f"Failed to process {doc['filename']}: {str(e)}")
@@ -148,43 +158,73 @@ Examples:
             logger.error("No data was successfully extracted from any documents.")
             return
 
-        # Save results
+        # Save results for each document
         logger.info("Saving extraction results...")
-        results_file = output_manager.save_extraction_results(
-            all_results,
-            args.output_file,
-            args.include_metadata
-        )
+        saved_files = []
 
-        print(f"✅ Extraction completed! Results saved to: {results_file}")
+        for filename, results in all_results.items():
+            # Create filename for this document's results
+            base_name = Path(filename).stem
+            output_filename = f"{base_name}_extraction_results.json" if not args.output_file else args.output_file
 
-        # Generate validation report if requested
-        if args.validate:
-            logger.info("Generating validation report...")
-            validation_data = extractor.validate_extraction(all_results)
-            validation_file = output_manager.save_validation_report(validation_data)
-            print(f"📊 Validation report saved to: {validation_file}")
+            results_file = output_manager.save_extraction_results(
+                results,
+                output_filename if len(all_results) == 1 else f"{base_name}_results.json",
+                args.include_metadata
+            )
+            saved_files.append(results_file)
 
-            # Print validation summary
-            print("\n📈 Extraction Summary:")
-            print(f"  Total fields processed: {validation_data['total_fields']}")
-            print(f"  Successfully extracted: {validation_data['found_fields']}")
-            print(f"  Extraction rate: {validation_data['extraction_rate']:.1%}")
-            print(f"  Average confidence: {validation_data['average_confidence']:.1%}")
+        print(f"✅ Extraction completed! Results saved to: {', '.join(saved_files)}")
 
-        # Generate comprehensive summary if requested
-        if args.summary:
-            logger.info("Generating summary report...")
-            summary_data = output_manager.create_summary_report(all_results)
-            summary_file = output_manager.save_validation_report(summary_data, "summary_report.json")
+        # Generate summary report for all documents
+        if args.summary or args.validate:
+            logger.info("Generating comprehensive summary...")
+
+            overall_summary = {
+                "total_documents_processed": len(all_results),
+                "processing_summary": {},
+                "extraction_types_found": set(),
+                "average_confidence_by_type": {},
+                "document_summaries": {}
+            }
+
+            for filename, results in all_results.items():
+                summary = extraction_pipeline.get_extraction_summary(results)
+                overall_summary["document_summaries"][filename] = summary
+                overall_summary["extraction_types_found"].update(summary["extraction_types_found"])
+
+            # Calculate averages
+            all_confidences = []
+            confidence_by_type = {}
+
+            for filename, results in all_results.items():
+                for key, value in results.items():
+                    if key != "extraction_metadata" and isinstance(value, dict):
+                        confidence = value.get("confidence", 0.0)
+                        if confidence > 0:
+                            all_confidences.append(confidence)
+                            if key not in confidence_by_type:
+                                confidence_by_type[key] = []
+                            confidence_by_type[key].append(confidence)
+
+            overall_summary["overall_average_confidence"] = sum(all_confidences) / len(all_confidences) if all_confidences else 0.0
+            overall_summary["extraction_types_found"] = list(overall_summary["extraction_types_found"])
+
+            for ext_type, confidences in confidence_by_type.items():
+                overall_summary["average_confidence_by_type"][ext_type] = sum(confidences) / len(confidences)
+
+            # Save summary report
+            summary_file = output_manager.save_validation_report(overall_summary, "comprehensive_summary.json")
             print(f"📋 Summary report saved to: {summary_file}")
 
-            # Print key recommendations
-            print("\n💡 Recommendations:")
-            for recommendation in summary_data['recommendations']:
-                print(f"  • {recommendation}")
+            # Print key statistics
+            print(f"\n📈 Overall Summary:")
+            print(f"  Documents processed: {overall_summary['total_documents_processed']}")
+            print(f"  Extraction types found: {', '.join(overall_summary['extraction_types_found'])}")
+            print(f"  Overall average confidence: {overall_summary['overall_average_confidence']:.1%}")
 
-        print(f"\n🎉 Processing complete! {len(all_results)} personal data fields extracted.")
+        total_extractions = sum(len(results.get('extraction_metadata', {}).get('extractors_run', [])) for results in all_results.values())
+        print(f"\n🎉 Processing complete! {total_extractions} total extractions performed across all documents.")
 
     except KeyboardInterrupt:
         logger.info("Process interrupted by user")

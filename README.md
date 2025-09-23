@@ -1,14 +1,26 @@
-# Document Personal Data Extraction Agent
+# Modular Document Data Extraction Agent
 
-A Python AI agent that uses Claude to extract personal details from documents for streamlining bank loan applications. The agent processes documents from a specified directory, extracts personal information using Claude's AI capabilities, and outputs structured JSON data.
+A Python AI agent that uses Claude to extract multiple types of data from documents. Features a modular pipeline architecture that can extract personal information, tabular data, and more. Perfect for streamlining loan applications, data processing, and document analysis workflows.
 
 ## Features
 
+### **🔧 Modular Pipeline Architecture**
+- **Multiple Extractors**: Personal data, tabular data, and easily extensible for more
+- **Priority-based Processing**: Extractors run in order of importance
+- **Smart Document Filtering**: Each extractor decides if it should process a document
+- **Parallel Processing**: Multiple extraction types run on the same document
+
+### **📊 Data Extraction Types**
+- **Personal Data**: Names, addresses, SSN, employment info, etc. (12 standard fields)
+- **Tabular Data**: Automatically detects and extracts tables with data type classification
+- **Extensible**: Easy to add new extraction types via base extractor class
+
+### **🎯 Advanced Features**
 - **Multi-format Support**: Processes TXT, PDF, and DOCX files
-- **Modular Architecture**: Easily extensible with custom tools
 - **Claude Integration**: Uses Anthropic's Claude API for intelligent extraction
-- **Structured Output**: JSON format with field name/value pairs
-- **Validation & Reporting**: Built-in confidence scoring and validation reports
+- **Confidence Scoring**: Each extraction includes confidence levels
+- **Structured Output**: JSON format with separate sections for each data type
+- **Comprehensive Reporting**: Built-in validation and summary reports
 - **CLI Interface**: Command-line interface for easy automation
 
 ## Installation
@@ -82,76 +94,133 @@ The agent extracts the following personal data fields:
 
 ## Output Format
 
-Results are saved as JSON with the following structure:
+Results are saved as JSON with separate sections for each extraction type:
 
 ```json
 {
   "extraction_summary": {
     "total_files_processed": 1,
-    "total_records": 12,
-    "processed_at": "2024-01-15T10:30:00"
+    "processed_at": "2024-01-15T10:30:00",
+    "extraction_types": ["personalData", "tabularData"]
   },
-  "results": {
-    "document1.pdf": [
+  "personalData": [
+    {
+      "record": "First name: John",
+      "confidence": 0.9
+    },
+    {
+      "record": "Last name: Smith",
+      "confidence": 0.8
+    }
+  ],
+  "tabularData": [
+    {
+      "dataType": "financial_data",
+      "headers": ["Account Type", "Balance", "Credit Limit"],
+      "data": [
+        ["Checking", "$5,000", "N/A"],
+        ["Credit Card", "$2,500", "$10,000"]
+      ],
+      "confidence": 0.85,
+      "description": "Financial accounts summary",
+      "table_id": "table_1",
+      "row_count": 2,
+      "column_count": 3
+    }
+  ],
+  "extraction_metadata": {
+    "filename": "document.pdf",
+    "processed_at": "2024-01-15T10:30:00",
+    "extractors_run": [
       {
-        "record": "First name: John",
-        "confidence": 0.9,
-        "extracted_at": "2024-01-15T10:30:00"
+        "name": "personal_data_extractor",
+        "type": "personal_data",
+        "success": true,
+        "confidence": 0.85
       },
       {
-        "record": "Last name: Smith",
-        "confidence": 0.9,
-        "extracted_at": "2024-01-15T10:30:00"
+        "name": "tabular_data_extractor",
+        "type": "tabular_data",
+        "success": true,
+        "confidence": 0.90
       }
-    ]
+    ],
+    "success_count": 2,
+    "error_count": 0
   }
 }
 ```
 
+### **Tabular Data Types**
+The tabular data extractor automatically classifies tables into types such as:
+- `financial_data` - Account balances, transactions, etc.
+- `personal_info` - Contact lists, personal details
+- `asset_list` - Property, investments, valuables
+- `liability_list` - Debts, loans, obligations
+- `income_statement` - Income sources and amounts
+- `expense_report` - Monthly expenses, budgets
+- `contact_list` - Names, phones, emails
+- `employment_history` - Work experience
+- And more...
+
 ## Architecture
 
-The agent follows a modular architecture:
+The agent follows a modular pipeline architecture:
 
 ```
 src/
 ├── agent/
 │   ├── core/
-│   │   ├── agent.py          # Main DocumentExtractionAgent class
-│   │   └── extractor.py      # PersonalDataExtractor logic
+│   │   ├── agent.py              # Main DocumentExtractionAgent class
+│   │   ├── base_extractor.py     # Abstract base class for extractors
+│   │   └── extraction_pipeline.py # Pipeline coordinator
+│   ├── extractors/
+│   │   ├── personal_data_extractor.py  # Personal information extraction
+│   │   └── tabular_data_extractor.py   # Table data extraction
 │   ├── utils/
-│   │   ├── document_processor.py  # Document reading utilities
-│   │   └── output_manager.py      # Output handling
-│   └── tools/                     # Extensible tools directory
+│   │   ├── document_processor.py       # Document reading utilities
+│   │   └── output_manager.py           # Output handling
+│   └── tools/                          # Agent tools directory
 ```
 
-## Adding Custom Tools
+## Adding Custom Extractors
 
-To add custom tools to the agent:
+To add new data extraction types:
 
-1. Create a new tool class inheriting from `Tool`:
+1. Create a new extractor inheriting from `BaseExtractor`:
 
 ```python
-from agent.core.agent import Tool
+from agent.core.base_extractor import BaseExtractor, ExtractionResult
 
-class CustomTool(Tool):
+class CustomDataExtractor(BaseExtractor):
+    def __init__(self, claude_client):
+        super().__init__(claude_client, "custom_extractor")
+
     @property
-    def name(self) -> str:
-        return "custom_tool"
+    def extraction_type(self) -> str:
+        return "custom_data"
 
     @property
     def description(self) -> str:
-        return "Description of what this tool does"
+        return "Extracts custom data from documents"
 
-    def execute(self, *args, **kwargs):
-        # Tool implementation
+    def extract(self, document_content: str, filename: str = "") -> ExtractionResult:
+        # Your extraction logic here
+        raw_response = self._extract_with_claude(document_content)
+        # Process and return ExtractionResult
         pass
+
+    def _build_extraction_prompt(self, document_content: str) -> str:
+        return "Your custom Claude prompt here..."
 ```
 
-2. Add the tool to your agent:
+2. Add the extractor to the pipeline:
 
 ```python
-agent = DocumentExtractionAgent()
-agent.add_tool(CustomTool())
+from agent.core.extraction_pipeline import ExtractionPipeline
+
+pipeline = ExtractionPipeline(claude_client)
+pipeline.add_extractor(CustomDataExtractor(claude_client))
 ```
 
 ## Security & Privacy

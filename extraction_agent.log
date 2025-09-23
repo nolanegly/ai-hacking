@@ -284,3 +284,122 @@
 2025-09-23 13:31:20,042 - agent.utils.output_manager - INFO - Results saved to: data/output/extraction_results_20250923_133120.json
 2025-09-23 13:31:20,063 - httpcore.connection - DEBUG - close.started
 2025-09-23 13:31:20,064 - httpcore.connection - DEBUG - close.complete
+2025-09-23 14:12:53,250 - __main__ - INFO - Initializing Document Extraction Agent with modular pipeline...
+2025-09-23 14:12:53,279 - agent.core.extraction_pipeline - INFO - Added extractor: personal_data_extractor (personal_data)
+2025-09-23 14:12:53,279 - agent.core.extraction_pipeline - INFO - Added extractor: tabular_data_extractor (tabular_data)
+2025-09-23 14:12:53,279 - __main__ - INFO - Loaded 2 extractors:
+2025-09-23 14:12:53,279 - __main__ - INFO -   - personal_data_extractor: Extracts personal information fields for loan applications
+2025-09-23 14:12:53,279 - __main__ - INFO -   - tabular_data_extractor: Extracts tabular data and identifies data types within tables
+2025-09-23 14:12:53,279 - __main__ - INFO - Processing documents from: data/input
+2025-09-23 14:12:53,298 - agent.utils.document_processor - INFO - Successfully processed: HSBC_Example_Statement.pdf
+2025-09-23 14:12:53,435 - agent.utils.document_processor - INFO - Successfully processed: Bank Statement 2a.docx
+2025-09-23 14:12:53,619 - agent.utils.document_processor - INFO - Successfully processed: New Firm Application Sample_PAWNEE LAW FIRM PC - 2024.pdf
+2025-09-23 14:12:53,621 - agent.utils.document_processor - INFO - Successfully processed: Bank Statement 2.docx
+2025-09-23 14:12:53,621 - agent.utils.document_processor - INFO - Successfully processed: sample_application.txt
+2025-09-23 14:12:53,624 - agent.utils.document_processor - INFO - Successfully processed: Bank Statement 1.docx
+2025-09-23 14:12:53,624 - agent.utils.document_processor - INFO - Successfully processed: financial_statement.txt
+2025-09-23 14:12:53,627 - agent.utils.document_processor - INFO - Successfully processed: nje bank statement 01.docx
+2025-09-23 14:12:53,629 - agent.utils.document_processor - INFO - Successfully processed: Bank Statement 2b.docx
+2025-09-23 14:12:53,642 - agent.utils.document_processor - INFO - Successfully processed: Bank Statement 2.pdf
+2025-09-23 14:12:53,654 - agent.utils.document_processor - INFO - Successfully processed: Bank Statement 1.pdf
+2025-09-23 14:12:53,654 - __main__ - INFO - Found 11 documents to process
+2025-09-23 14:12:53,654 - __main__ - INFO - Processing: HSBC_Example_Statement.pdf
+2025-09-23 14:12:53,654 - agent.core.extraction_pipeline - INFO - Starting extraction pipeline for: HSBC_Example_Statement.pdf
+2025-09-23 14:12:53,654 - agent.core.extraction_pipeline - INFO - Pipeline completed for HSBC_Example_Statement.pdf: 0 successes, 0 errors
+2025-09-23 14:12:53,654 - __main__ - INFO - Successfully processed HSBC_Example_Statement.pdf - found 0 data types
+2025-09-23 14:12:53,654 - __main__ - INFO - Processing: Bank Statement 2a.docx
+2025-09-23 14:12:53,654 - agent.core.extraction_pipeline - INFO - Starting extraction pipeline for: Bank Statement 2a.docx
+2025-09-23 14:12:53,654 - agent.core.extraction_pipeline - INFO - Running extractor: personal_data_extractor
+2025-09-23 14:12:56,653 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-09-23 14:12:56,668 - agent.core.extraction_pipeline - INFO - Completed extractor: personal_data_extractor (confidence: 0.40)
+2025-09-23 14:12:56,669 - agent.core.extraction_pipeline - INFO - Running extractor: tabular_data_extractor
+2025-09-23 14:12:59,580 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-09-23 14:12:59,583 - agent.core.extraction_pipeline - INFO - Completed extractor: tabular_data_extractor (confidence: 0.93)
+2025-09-23 14:12:59,584 - agent.core.extraction_pipeline - INFO - Pipeline completed for Bank Statement 2a.docx: 2 successes, 0 errors
+2025-09-23 14:12:59,584 - __main__ - INFO - Successfully processed Bank Statement 2a.docx - found 2 data types
+2025-09-23 14:12:59,584 - __main__ - INFO - Processing: New Firm Application Sample_PAWNEE LAW FIRM PC - 2024.pdf
+2025-09-23 14:12:59,584 - agent.core.extraction_pipeline - INFO - Starting extraction pipeline for: New Firm Application Sample_PAWNEE LAW FIRM PC - 2024.pdf
+2025-09-23 14:12:59,587 - agent.core.extraction_pipeline - INFO - Pipeline completed for New Firm Application Sample_PAWNEE LAW FIRM PC - 2024.pdf: 0 successes, 0 errors
+2025-09-23 14:12:59,587 - __main__ - INFO - Successfully processed New Firm Application Sample_PAWNEE LAW FIRM PC - 2024.pdf - found 0 data types
+2025-09-23 14:12:59,587 - __main__ - INFO - Processing: Bank Statement 2.docx
+2025-09-23 14:12:59,587 - agent.core.extraction_pipeline - INFO - Starting extraction pipeline for: Bank Statement 2.docx
+2025-09-23 14:12:59,587 - agent.core.extraction_pipeline - INFO - Running extractor: personal_data_extractor
+2025-09-23 14:13:02,175 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-09-23 14:13:02,179 - agent.core.extraction_pipeline - INFO - Completed extractor: personal_data_extractor (confidence: 0.28)
+2025-09-23 14:13:02,179 - agent.core.extraction_pipeline - INFO - Running extractor: tabular_data_extractor
+2025-09-23 14:13:05,121 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-09-23 14:13:05,125 - agent.core.extraction_pipeline - INFO - Completed extractor: tabular_data_extractor (confidence: 0.93)
+2025-09-23 14:13:05,126 - agent.core.extraction_pipeline - INFO - Pipeline completed for Bank Statement 2.docx: 2 successes, 0 errors
+2025-09-23 14:13:05,126 - __main__ - INFO - Successfully processed Bank Statement 2.docx - found 2 data types
+2025-09-23 14:13:05,126 - __main__ - INFO - Processing: sample_application.txt
+2025-09-23 14:13:05,126 - agent.core.extraction_pipeline - INFO - Starting extraction pipeline for: sample_application.txt
+2025-09-23 14:13:05,126 - agent.core.extraction_pipeline - INFO - Running extractor: personal_data_extractor
+2025-09-23 14:13:08,012 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-09-23 14:13:08,015 - agent.core.extraction_pipeline - INFO - Completed extractor: personal_data_extractor (confidence: 0.89)
+2025-09-23 14:13:08,016 - agent.core.extraction_pipeline - INFO - Pipeline completed for sample_application.txt: 1 successes, 0 errors
+2025-09-23 14:13:08,016 - __main__ - INFO - Successfully processed sample_application.txt - found 1 data types
+2025-09-23 14:13:08,016 - __main__ - INFO - Processing: Bank Statement 1.docx
+2025-09-23 14:13:08,016 - agent.core.extraction_pipeline - INFO - Starting extraction pipeline for: Bank Statement 1.docx
+2025-09-23 14:13:08,016 - agent.core.extraction_pipeline - INFO - Running extractor: personal_data_extractor
+2025-09-23 14:13:10,996 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-09-23 14:13:10,998 - agent.core.extraction_pipeline - INFO - Completed extractor: personal_data_extractor (confidence: 0.28)
+2025-09-23 14:13:10,998 - agent.core.extraction_pipeline - INFO - Running extractor: tabular_data_extractor
+2025-09-23 14:13:12,698 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-09-23 14:13:12,700 - agent.core.extraction_pipeline - INFO - Completed extractor: tabular_data_extractor (confidence: 0.95)
+2025-09-23 14:13:12,700 - agent.core.extraction_pipeline - INFO - Pipeline completed for Bank Statement 1.docx: 2 successes, 0 errors
+2025-09-23 14:13:12,700 - __main__ - INFO - Successfully processed Bank Statement 1.docx - found 2 data types
+2025-09-23 14:13:12,701 - __main__ - INFO - Processing: financial_statement.txt
+2025-09-23 14:13:12,701 - agent.core.extraction_pipeline - INFO - Starting extraction pipeline for: financial_statement.txt
+2025-09-23 14:13:12,701 - agent.core.extraction_pipeline - INFO - Running extractor: personal_data_extractor
+2025-09-23 14:13:16,050 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-09-23 14:13:16,053 - agent.core.extraction_pipeline - INFO - Completed extractor: personal_data_extractor (confidence: 0.92)
+2025-09-23 14:13:16,053 - agent.core.extraction_pipeline - INFO - Running extractor: tabular_data_extractor
+2025-09-23 14:13:21,948 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-09-23 14:13:21,950 - agent.core.extraction_pipeline - INFO - Completed extractor: tabular_data_extractor (confidence: 0.94)
+2025-09-23 14:13:21,951 - agent.core.extraction_pipeline - INFO - Pipeline completed for financial_statement.txt: 2 successes, 0 errors
+2025-09-23 14:13:21,951 - __main__ - INFO - Successfully processed financial_statement.txt - found 2 data types
+2025-09-23 14:13:21,951 - __main__ - INFO - Processing: nje bank statement 01.docx
+2025-09-23 14:13:21,951 - agent.core.extraction_pipeline - INFO - Starting extraction pipeline for: nje bank statement 01.docx
+2025-09-23 14:13:21,951 - agent.core.extraction_pipeline - INFO - Running extractor: personal_data_extractor
+2025-09-23 14:13:24,040 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-09-23 14:13:24,047 - agent.core.extraction_pipeline - INFO - Completed extractor: personal_data_extractor (confidence: 0.44)
+2025-09-23 14:13:24,047 - agent.core.extraction_pipeline - INFO - Pipeline completed for nje bank statement 01.docx: 1 successes, 0 errors
+2025-09-23 14:13:24,048 - __main__ - INFO - Successfully processed nje bank statement 01.docx - found 1 data types
+2025-09-23 14:13:24,048 - __main__ - INFO - Processing: Bank Statement 2b.docx
+2025-09-23 14:13:24,048 - agent.core.extraction_pipeline - INFO - Starting extraction pipeline for: Bank Statement 2b.docx
+2025-09-23 14:13:24,049 - agent.core.extraction_pipeline - INFO - Running extractor: personal_data_extractor
+2025-09-23 14:13:26,710 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-09-23 14:13:26,711 - agent.core.extraction_pipeline - INFO - Completed extractor: personal_data_extractor (confidence: 0.40)
+2025-09-23 14:13:26,711 - agent.core.extraction_pipeline - INFO - Running extractor: tabular_data_extractor
+2025-09-23 14:13:29,733 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-09-23 14:13:29,734 - agent.core.extraction_pipeline - INFO - Completed extractor: tabular_data_extractor (confidence: 0.93)
+2025-09-23 14:13:29,734 - agent.core.extraction_pipeline - INFO - Pipeline completed for Bank Statement 2b.docx: 2 successes, 0 errors
+2025-09-23 14:13:29,734 - __main__ - INFO - Successfully processed Bank Statement 2b.docx - found 2 data types
+2025-09-23 14:13:29,734 - __main__ - INFO - Processing: Bank Statement 2.pdf
+2025-09-23 14:13:29,734 - agent.core.extraction_pipeline - INFO - Starting extraction pipeline for: Bank Statement 2.pdf
+2025-09-23 14:13:29,734 - agent.core.extraction_pipeline - INFO - Running extractor: personal_data_extractor
+2025-09-23 14:13:32,296 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-09-23 14:13:32,299 - agent.core.extraction_pipeline - INFO - Completed extractor: personal_data_extractor (confidence: 0.28)
+2025-09-23 14:13:32,299 - agent.core.extraction_pipeline - INFO - Pipeline completed for Bank Statement 2.pdf: 1 successes, 0 errors
+2025-09-23 14:13:32,300 - __main__ - INFO - Successfully processed Bank Statement 2.pdf - found 1 data types
+2025-09-23 14:13:32,300 - __main__ - INFO - Processing: Bank Statement 1.pdf
+2025-09-23 14:13:32,300 - agent.core.extraction_pipeline - INFO - Starting extraction pipeline for: Bank Statement 1.pdf
+2025-09-23 14:13:32,301 - agent.core.extraction_pipeline - INFO - Running extractor: personal_data_extractor
+2025-09-23 14:13:35,246 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-09-23 14:13:35,251 - agent.core.extraction_pipeline - INFO - Completed extractor: personal_data_extractor (confidence: 0.29)
+2025-09-23 14:13:35,252 - agent.core.extraction_pipeline - INFO - Pipeline completed for Bank Statement 1.pdf: 1 successes, 0 errors
+2025-09-23 14:13:35,252 - __main__ - INFO - Successfully processed Bank Statement 1.pdf - found 1 data types
+2025-09-23 14:13:35,252 - __main__ - INFO - Saving extraction results...
+2025-09-23 14:13:35,255 - agent.utils.output_manager - INFO - Results saved to: data/output/HSBC_Example_Statement_results.json
+2025-09-23 14:13:35,256 - agent.utils.output_manager - INFO - Results saved to: data/output/Bank Statement 2a_results.json
+2025-09-23 14:13:35,258 - agent.utils.output_manager - INFO - Results saved to: data/output/New Firm Application Sample_PAWNEE LAW FIRM PC - 2024_results.json
+2025-09-23 14:13:35,259 - agent.utils.output_manager - INFO - Results saved to: data/output/Bank Statement 2_results.json
+2025-09-23 14:13:35,260 - agent.utils.output_manager - INFO - Results saved to: data/output/sample_application_results.json
+2025-09-23 14:13:35,261 - agent.utils.output_manager - INFO - Results saved to: data/output/Bank Statement 1_results.json
+2025-09-23 14:13:35,261 - agent.utils.output_manager - INFO - Results saved to: data/output/financial_statement_results.json
+2025-09-23 14:13:35,262 - agent.utils.output_manager - INFO - Results saved to: data/output/nje bank statement 01_results.json
+2025-09-23 14:13:35,262 - agent.utils.output_manager - INFO - Results saved to: data/output/Bank Statement 2b_results.json
+2025-09-23 14:13:35,262 - agent.utils.output_manager - INFO - Results saved to: data/output/Bank Statement 2_results.json
+2025-09-23 14:13:35,263 - agent.utils.output_manager - INFO - Results saved to: data/output/Bank Statement 1_results.json
+2025-09-23 14:13:35,263 - __main__ - INFO - Generating comprehensive summary...
+2025-09-23 14:13:35,263 - agent.utils.output_manager - INFO - Validation report saved to: data/output/comprehensive_summary.json

@@ -1,0 +1,46 @@
+PERSONAL FINANCIAL STATEMENT
+
+Applicant Information:
+Name: Sarah Johnson
+Date of Birth: 08/22/1988
+SSN: 987-65-4321
+Address: 456 Oak Avenue, Springfield, IL 62701
+Phone: (217) 555-9876
+Email: sarah.johnson@email.com
+
+Employment Details:
+Employer: TechCorp Solutions
+Job Title: Senior Software Developer
+Employment Status: Full-time
+Annual Salary: $95,000
+
+ASSETS
+Asset Type          Current Value    Date Acquired
+Checking Account    $8,500          01/2020
+Savings Account     $25,000         03/2019
+401(k) Account      $45,000         06/2018
+Stock Portfolio     $15,000         09/2021
+Primary Residence   $250,000        05/2020
+Vehicle (2019 Honda) $18,000        03/2019
+
+MONTHLY EXPENSES
+Category            Amount
+Mortgage Payment    $1,800
+Car Payment         $350
+Insurance           $200
+Utilities           $150
+Groceries           $400
+Entertainment       $300
+Other               $200
+
+CREDIT ACCOUNTS
+Account Type        Balance    Credit Limit    Monthly Payment
+Credit Card A       $2,500     $10,000        $150
+Credit Card B       $800       $5,000         $50
+Personal Loan       $8,000     N/A            $300
+
+REFERENCES
+Name                Phone           Relationship
+Michael Davis       (217) 555-1111  Supervisor
+Lisa Brown          (217) 555-2222  Colleague
+Robert Wilson       (217) 555-3333  Friend

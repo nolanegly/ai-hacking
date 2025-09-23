@@ -1,0 +1,18 @@
+{
+  "extraction_summary": {
+    "total_files_processed": 1,
+    "processed_at": "2025-09-23T14:13:35.253223",
+    "extraction_types": [
+      "extraction_metadata"
+    ]
+  },
+  "extraction_metadata": {
+    "filename": "HSBC_Example_Statement.pdf",
+    "processed_at": "2025-09-23T14:12:53.654230",
+    "extractors_run": [],
+    "total_processing_time": 9.8e-05,
+    "success_count": 0,
+    "error_count": 0,
+    "completed_at": "2025-09-23T14:12:53.654332"
+  }
+}
