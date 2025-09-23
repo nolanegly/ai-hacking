@@ -75,16 +75,19 @@ class OutputManager:
             formatted_personal = []
 
             for record in personal_data:
-                formatted_record = {
-                    "record": f"{record['field_name']}: {record['field_value']}",
-                    "confidence": record.get("confidence", 0.0)
-                }
+                # Only include records where data was actually found
+                if record["field_value"] != "Not found":
+                    camel_case_field = self._convert_to_camel_case(record["field_name"])
 
-                if include_metadata:
-                    formatted_record["field_name"] = record["field_name"]
-                    formatted_record["extracted_at"] = results["personalData"].get("extracted_at", "")
+                    formatted_record = {
+                        camel_case_field: record["field_value"],
+                        "confidence": record.get("confidence", 0.0)
+                    }
 
-                formatted_personal.append(formatted_record)
+                    if include_metadata:
+                        formatted_record["extracted_at"] = results["personalData"].get("extracted_at", "")
+
+                    formatted_personal.append(formatted_record)
 
             output_data["personalData"] = formatted_personal
 
@@ -138,6 +141,39 @@ class OutputManager:
         }
 
         return output_data
+
+    def _convert_to_camel_case(self, field_name: str) -> str:
+        """Convert field name to camelCase format."""
+        # Mapping of standard field names to camelCase
+        field_mapping = {
+            "First name": "firstName",
+            "Last name": "lastName",
+            "Middle name": "middleName",
+            "Date of birth": "dateOfBirth",
+            "Social Security Number": "socialSecurityNumber",
+            "Phone number": "phoneNumber",
+            "Email address": "emailAddress",
+            "Home address": "homeAddress",
+            "Employment status": "employmentStatus",
+            "Annual income": "annualIncome",
+            "Employer name": "employerName",
+            "Job title": "jobTitle"
+        }
+
+        # Return mapped field name or convert generic field name to camelCase
+        if field_name in field_mapping:
+            return field_mapping[field_name]
+
+        # Generic conversion: remove spaces, lowercase first word, capitalize others
+        words = field_name.split()
+        if len(words) == 0:
+            return field_name
+
+        camel_case = words[0].lower()
+        for word in words[1:]:
+            camel_case += word.capitalize()
+
+        return camel_case
 
     def save_validation_report(self, validation_data: Dict[str, Any], filename: str = None) -> str:
         """

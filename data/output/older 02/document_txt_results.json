@@ -1,7 +1,7 @@
 {
   "extraction_summary": {
     "total_files_processed": 1,
-    "processed_at": "2025-09-23T15:11:39.513330",
+    "processed_at": "2025-09-23T14:29:45.992492",
     "extraction_types": [
       "personalData",
       "tabularData",
@@ -10,24 +10,52 @@
   },
   "personalData": [
     {
-      "firstName": "Bob",
+      "record": "First name: Bob",
       "confidence": 0.9
     },
     {
-      "lastName": "Smith",
+      "record": "Last name: Smith",
       "confidence": 0.9
     },
     {
-      "phoneNumber": "(555) 333-4444",
+      "record": "Middle name: Not found",
+      "confidence": 0.0
+    },
+    {
+      "record": "Date of birth: Not found",
+      "confidence": 0.0
+    },
+    {
+      "record": "Social Security Number: Not found",
+      "confidence": 0.0
+    },
+    {
+      "record": "Phone number: (555) 333-4444",
       "confidence": 0.9
     },
     {
-      "emailAddress": "bob@example.com",
+      "record": "Email address: bob@example.com",
       "confidence": 0.9
     },
     {
-      "homeAddress": "321 Oak Avenue, Town, State 54321",
+      "record": "Home address: 321 Oak Avenue, Town, State 54321",
       "confidence": 0.9
+    },
+    {
+      "record": "Employment status: Not found",
+      "confidence": 0.0
+    },
+    {
+      "record": "Annual income: Not found",
+      "confidence": 0.0
+    },
+    {
+      "record": "Employer name: Not found",
+      "confidence": 0.0
+    },
+    {
+      "record": "Job title: Not found",
+      "confidence": 0.0
     }
   ],
   "tabularData": [
@@ -82,26 +110,26 @@
   ],
   "extraction_metadata": {
     "filename": "document.txt",
-    "processed_at": "2025-09-23T15:10:56.806922",
+    "processed_at": "2025-09-23T14:29:07.238021",
     "extractors_run": [
       {
         "name": "personal_data_extractor",
         "type": "personal_data",
         "success": true,
-        "processing_time": 2.247107,
+        "processing_time": 2.19185,
         "confidence": 0.375
       },
       {
         "name": "tabular_data_extractor",
         "type": "tabular_data",
         "success": true,
-        "processing_time": 2.071058,
+        "processing_time": 1.806486,
         "confidence": 0.925
       }
     ],
-    "total_processing_time": 4.318633,
+    "total_processing_time": 3.999371,
     "success_count": 2,
     "error_count": 0,
-    "completed_at": "2025-09-23T15:11:01.125563"
+    "completed_at": "2025-09-23T14:29:11.237399"
   }
 }

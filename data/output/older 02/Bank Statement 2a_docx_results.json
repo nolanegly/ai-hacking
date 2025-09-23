@@ -1,7 +1,7 @@
 {
   "extraction_summary": {
     "total_files_processed": 1,
-    "processed_at": "2025-09-23T15:11:39.512052",
+    "processed_at": "2025-09-23T14:29:45.991458",
     "extraction_types": [
       "personalData",
       "tabularData",
@@ -10,20 +10,52 @@
   },
   "personalData": [
     {
-      "firstName": "Jane",
+      "record": "First name: Jane",
       "confidence": 0.9
     },
     {
-      "lastName": "Goodall",
+      "record": "Last name: Goodall",
       "confidence": 0.9
     },
     {
-      "phoneNumber": "(555) 987-7777",
+      "record": "Middle name: Not found",
+      "confidence": 0.0
+    },
+    {
+      "record": "Date of birth: Not found",
+      "confidence": 0.0
+    },
+    {
+      "record": "Social Security Number: Not found",
+      "confidence": 0.0
+    },
+    {
+      "record": "Phone number: (555) 987-7777",
       "confidence": 0.8
     },
     {
-      "homeAddress": "432 Elm St, Othertown, USA 67890",
+      "record": "Email address: Not found",
+      "confidence": 0.0
+    },
+    {
+      "record": "Home address: 432 Elm St, Othertown, USA 67890",
       "confidence": 0.8
+    },
+    {
+      "record": "Employment status: Not found",
+      "confidence": 0.0
+    },
+    {
+      "record": "Annual income: Not found",
+      "confidence": 0.0
+    },
+    {
+      "record": "Employer name: Not found",
+      "confidence": 0.0
+    },
+    {
+      "record": "Job title: Not found",
+      "confidence": 0.0
     }
   ],
   "tabularData": [
@@ -126,26 +158,26 @@
   ],
   "extraction_metadata": {
     "filename": "Bank Statement 2a.docx",
-    "processed_at": "2025-09-23T15:10:51.078018",
+    "processed_at": "2025-09-23T14:29:01.436372",
     "extractors_run": [
       {
         "name": "personal_data_extractor",
         "type": "personal_data",
         "success": true,
-        "processing_time": 2.688632,
+        "processing_time": 2.771506,
         "confidence": 0.2833333333333334
       },
       {
         "name": "tabular_data_extractor",
         "type": "tabular_data",
         "success": true,
-        "processing_time": 3.039718,
+        "processing_time": 3.028339,
         "confidence": 0.925
       }
     ],
-    "total_processing_time": 5.728719,
+    "total_processing_time": 5.80038,
     "success_count": 2,
     "error_count": 0,
-    "completed_at": "2025-09-23T15:10:56.806746"
+    "completed_at": "2025-09-23T14:29:07.236761"
   }
 }

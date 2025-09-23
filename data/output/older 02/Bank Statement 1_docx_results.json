@@ -1,7 +1,7 @@
 {
   "extraction_summary": {
     "total_files_processed": 1,
-    "processed_at": "2025-09-23T15:11:39.515740",
+    "processed_at": "2025-09-23T14:29:45.994653",
     "extraction_types": [
       "personalData",
       "tabularData",
@@ -10,20 +10,52 @@
   },
   "personalData": [
     {
-      "firstName": "John",
+      "record": "First name: John",
       "confidence": 0.9
     },
     {
-      "lastName": "Doe",
+      "record": "Last name: Doe",
       "confidence": 0.9
     },
     {
-      "phoneNumber": "(555) 123-4567",
+      "record": "Middle name: Not found",
+      "confidence": 0.0
+    },
+    {
+      "record": "Date of birth: Not found",
+      "confidence": 0.0
+    },
+    {
+      "record": "Social Security Number: Not found",
+      "confidence": 0.0
+    },
+    {
+      "record": "Phone number: (555) 123-4567",
       "confidence": 0.8
     },
     {
-      "homeAddress": "123 Main St, Anytown, USA 12345",
+      "record": "Email address: Not found",
+      "confidence": 0.0
+    },
+    {
+      "record": "Home address: 123 Main St, Anytown, USA 12345",
       "confidence": 0.8
+    },
+    {
+      "record": "Employment status: Not found",
+      "confidence": 0.0
+    },
+    {
+      "record": "Annual income: Not found",
+      "confidence": 0.0
+    },
+    {
+      "record": "Employer name: Not found",
+      "confidence": 0.0
+    },
+    {
+      "record": "Job title: Not found",
+      "confidence": 0.0
     }
   ],
   "tabularData": [
@@ -60,26 +92,26 @@
   ],
   "extraction_metadata": {
     "filename": "Bank Statement 1.docx",
-    "processed_at": "2025-09-23T15:11:09.834470",
+    "processed_at": "2025-09-23T14:29:20.507178",
     "extractors_run": [
       {
         "name": "personal_data_extractor",
         "type": "personal_data",
         "success": true,
-        "processing_time": 2.941574,
+        "processing_time": 2.608389,
         "confidence": 0.2833333333333334
       },
       {
         "name": "tabular_data_extractor",
         "type": "tabular_data",
         "success": true,
-        "processing_time": 1.718828,
+        "processing_time": 1.611643,
         "confidence": 0.95
       }
     ],
-    "total_processing_time": 4.66104,
+    "total_processing_time": 4.220932,
     "success_count": 2,
     "error_count": 0,
-    "completed_at": "2025-09-23T15:11:14.495517"
+    "completed_at": "2025-09-23T14:29:24.728116"
   }
 }

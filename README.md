@@ -106,12 +106,16 @@ Results are saved as JSON with separate sections for each extraction type:
   },
   "personalData": [
     {
-      "record": "First name: John",
+      "firstName": "John",
       "confidence": 0.9
     },
     {
-      "record": "Last name: Smith",
+      "lastName": "Smith",
       "confidence": 0.8
+    },
+    {
+      "phoneNumber": "(555) 123-4567",
+      "confidence": 0.9
     }
   ],
   "tabularData": [
@@ -151,6 +155,29 @@ Results are saved as JSON with separate sections for each extraction type:
   }
 }
 ```
+
+### **Personal Data Format**
+The personal data section uses camelCase field names and only includes fields where data was actually found:
+
+**Field Mappings:**
+- `First name` → `firstName`
+- `Last name` → `lastName`
+- `Phone number` → `phoneNumber`
+- `Email address` → `emailAddress`
+- `Home address` → `homeAddress`
+- `Social Security Number` → `socialSecurityNumber`
+- `Date of birth` → `dateOfBirth`
+- `Employment status` → `employmentStatus`
+- `Annual income` → `annualIncome`
+- `Employer name` → `employerName`
+- `Job title` → `jobTitle`
+- `Middle name` → `middleName`
+
+**Key Features:**
+- Only includes fields with actual data (excludes "Not found" values)
+- Each record is a separate object with the field name as the key
+- Confidence score included for each field
+- Clean, structured format for easy parsing
 
 ### **Tabular Data Types**
 The tabular data extractor automatically classifies tables into types such as:

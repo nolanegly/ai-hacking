@@ -1,0 +1,77 @@
+{
+  "extraction_summary": {
+    "total_files_processed": 1,
+    "processed_at": "2025-09-23T14:29:45.997159",
+    "extraction_types": [
+      "personalData",
+      "extraction_metadata"
+    ]
+  },
+  "personalData": [
+    {
+      "record": "First name: Jane",
+      "confidence": 0.9
+    },
+    {
+      "record": "Last name: Smith",
+      "confidence": 0.9
+    },
+    {
+      "record": "Middle name: Not found",
+      "confidence": 0.0
+    },
+    {
+      "record": "Date of birth: Not found",
+      "confidence": 0.0
+    },
+    {
+      "record": "Social Security Number: Not found",
+      "confidence": 0.0
+    },
+    {
+      "record": "Phone number: (555) 987-6543",
+      "confidence": 0.8
+    },
+    {
+      "record": "Email address: Not found",
+      "confidence": 0.0
+    },
+    {
+      "record": "Home address: 456 Elm St, Other town, USA 67890",
+      "confidence": 0.8
+    },
+    {
+      "record": "Employment status: Not found",
+      "confidence": 0.0
+    },
+    {
+      "record": "Annual income: Not found",
+      "confidence": 0.0
+    },
+    {
+      "record": "Employer name: Not found",
+      "confidence": 0.0
+    },
+    {
+      "record": "Job title: Not found",
+      "confidence": 0.0
+    }
+  ],
+  "extraction_metadata": {
+    "filename": "Bank Statement 2.pdf",
+    "processed_at": "2025-09-23T14:29:40.517349",
+    "extractors_run": [
+      {
+        "name": "personal_data_extractor",
+        "type": "personal_data",
+        "success": true,
+        "processing_time": 2.533021,
+        "confidence": 0.2833333333333334
+      }
+    ],
+    "total_processing_time": 2.533715,
+    "success_count": 1,
+    "error_count": 0,
+    "completed_at": "2025-09-23T14:29:43.051073"
+  }
+}

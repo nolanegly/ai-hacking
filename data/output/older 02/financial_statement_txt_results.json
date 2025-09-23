@@ -1,7 +1,7 @@
 {
   "extraction_summary": {
     "total_files_processed": 1,
-    "processed_at": "2025-09-23T15:11:39.516130",
+    "processed_at": "2025-09-23T14:29:45.995670",
     "extraction_types": [
       "personalData",
       "tabularData",
@@ -10,47 +10,51 @@
   },
   "personalData": [
     {
-      "firstName": "Sarah",
+      "record": "First name: Sarah",
       "confidence": 1.0
     },
     {
-      "lastName": "Johnson",
+      "record": "Last name: Johnson",
       "confidence": 1.0
     },
     {
-      "dateOfBirth": "08/22/1988",
+      "record": "Middle name: Not found",
+      "confidence": 0.0
+    },
+    {
+      "record": "Date of birth: 08/22/1988",
       "confidence": 1.0
     },
     {
-      "socialSecurityNumber": "987-65-4321",
+      "record": "Social Security Number: 987-65-4321",
       "confidence": 1.0
     },
     {
-      "phoneNumber": "(217) 555-9876",
+      "record": "Phone number: (217) 555-9876",
       "confidence": 1.0
     },
     {
-      "emailAddress": "sarah.johnson@email.com",
+      "record": "Email address: sarah.johnson@email.com",
       "confidence": 1.0
     },
     {
-      "homeAddress": "456 Oak Avenue, Springfield, IL 62701",
+      "record": "Home address: 456 Oak Avenue, Springfield, IL 62701",
       "confidence": 1.0
     },
     {
-      "employmentStatus": "Full-time",
+      "record": "Employment status: Full-time",
       "confidence": 1.0
     },
     {
-      "annualIncome": "$95,000",
+      "record": "Annual income: $95,000",
       "confidence": 1.0
     },
     {
-      "employerName": "TechCorp Solutions",
+      "record": "Employer name: TechCorp Solutions",
       "confidence": 1.0
     },
     {
-      "jobTitle": "Senior Software Developer",
+      "record": "Job title: Senior Software Developer",
       "confidence": 1.0
     }
   ],
@@ -95,7 +99,7 @@
         ]
       ],
       "confidence": 0.95,
-      "description": "List of assets",
+      "description": "List of personal assets",
       "table_id": "table_1",
       "row_count": 6,
       "column_count": 3
@@ -137,7 +141,7 @@
         ]
       ],
       "confidence": 0.92,
-      "description": "Monthly expenses",
+      "description": "Monthly personal expenses",
       "table_id": "table_2",
       "row_count": 7,
       "column_count": 2
@@ -171,7 +175,7 @@
         ]
       ],
       "confidence": 0.93,
-      "description": "Credit accounts and loans",
+      "description": "List of personal liabilities",
       "table_id": "table_3",
       "row_count": 3,
       "column_count": 4
@@ -201,7 +205,7 @@
         ]
       ],
       "confidence": 0.9,
-      "description": "References",
+      "description": "List of personal references",
       "table_id": "table_4",
       "row_count": 3,
       "column_count": 3
@@ -227,7 +231,7 @@
         ]
       ],
       "confidence": 0.98,
-      "description": "Applicant information",
+      "description": "Applicant personal information",
       "table_id": "table_5",
       "row_count": 1,
       "column_count": 6
@@ -249,7 +253,7 @@
         ]
       ],
       "confidence": 0.95,
-      "description": "Employment details",
+      "description": "Applicant employment details",
       "table_id": "table_6",
       "row_count": 1,
       "column_count": 4
@@ -257,26 +261,26 @@
   ],
   "extraction_metadata": {
     "filename": "financial_statement.txt",
-    "processed_at": "2025-09-23T15:11:14.496017",
+    "processed_at": "2025-09-23T14:29:24.728550",
     "extractors_run": [
       {
         "name": "personal_data_extractor",
         "type": "personal_data",
         "success": true,
-        "processing_time": 2.734686,
+        "processing_time": 2.640322,
         "confidence": 0.9166666666666666
       },
       {
         "name": "tabular_data_extractor",
         "type": "tabular_data",
         "success": true,
-        "processing_time": 6.653139,
+        "processing_time": 5.547082,
         "confidence": 0.9383333333333334
       }
     ],
-    "total_processing_time": 9.388691,
+    "total_processing_time": 8.188239,
     "success_count": 2,
     "error_count": 0,
-    "completed_at": "2025-09-23T15:11:23.884716"
+    "completed_at": "2025-09-23T14:29:32.916792"
   }
 }

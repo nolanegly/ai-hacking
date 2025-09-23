@@ -1,7 +1,7 @@
 {
   "extraction_summary": {
     "total_files_processed": 1,
-    "processed_at": "2025-09-23T15:11:39.515363",
+    "processed_at": "2025-09-23T14:29:45.994191",
     "extraction_types": [
       "personalData",
       "extraction_metadata"
@@ -9,69 +9,69 @@
   },
   "personalData": [
     {
-      "firstName": "John",
+      "record": "First name: John",
       "confidence": 0.9
     },
     {
-      "lastName": "Smith",
+      "record": "Last name: Smith",
       "confidence": 0.9
     },
     {
-      "middleName": "M",
+      "record": "Middle name: M",
       "confidence": 0.8
     },
     {
-      "dateOfBirth": "03/15/1985",
+      "record": "Date of birth: 03/15/1985",
       "confidence": 0.9
     },
     {
-      "socialSecurityNumber": "123-45-6789",
+      "record": "Social Security Number: 123-45-6789",
       "confidence": 0.9
     },
     {
-      "phoneNumber": "(555) 123-4567",
+      "record": "Phone number: (555) 123-4567",
       "confidence": 0.9
     },
     {
-      "emailAddress": "john.smith@email.com",
+      "record": "Email address: john.smith@email.com",
       "confidence": 0.9
     },
     {
-      "homeAddress": "123 Main Street, Anytown, NY 12345",
+      "record": "Home address: 123 Main Street, Anytown, NY 12345",
       "confidence": 0.9
     },
     {
-      "employmentStatus": "Full-time employed",
+      "record": "Employment status: Full-time employed",
       "confidence": 0.9
     },
     {
-      "annualIncome": "$75,000",
+      "record": "Annual income: $75,000",
       "confidence": 0.9
     },
     {
-      "employerName": "ABC Corporation",
+      "record": "Employer name: ABC Corporation",
       "confidence": 0.9
     },
     {
-      "jobTitle": "Software Engineer",
+      "record": "Job title: Software Engineer",
       "confidence": 0.9
     }
   ],
   "extraction_metadata": {
     "filename": "sample_application.txt",
-    "processed_at": "2025-09-23T15:11:07.125110",
+    "processed_at": "2025-09-23T14:29:17.449587",
     "extractors_run": [
       {
         "name": "personal_data_extractor",
         "type": "personal_data",
         "success": true,
-        "processing_time": 2.708882,
+        "processing_time": 3.056768,
         "confidence": 0.8916666666666667
       }
     ],
-    "total_processing_time": 2.709237,
+    "total_processing_time": 3.057144,
     "success_count": 1,
     "error_count": 0,
-    "completed_at": "2025-09-23T15:11:09.834349"
+    "completed_at": "2025-09-23T14:29:20.506738"
   }
 }

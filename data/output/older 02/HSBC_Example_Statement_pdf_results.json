@@ -1,18 +1,18 @@
 {
   "extraction_summary": {
     "total_files_processed": 1,
-    "processed_at": "2025-09-23T15:11:39.510769",
+    "processed_at": "2025-09-23T14:29:45.990280",
     "extraction_types": [
       "extraction_metadata"
     ]
   },
   "extraction_metadata": {
     "filename": "HSBC_Example_Statement.pdf",
-    "processed_at": "2025-09-23T15:10:51.077866",
+    "processed_at": "2025-09-23T14:29:01.436208",
     "extractors_run": [],
-    "total_processing_time": 9.2e-05,
+    "total_processing_time": 0.000104,
     "success_count": 0,
     "error_count": 0,
-    "completed_at": "2025-09-23T15:10:51.077961"
+    "completed_at": "2025-09-23T14:29:01.436315"
   }
 }

@@ -2,11 +2,11 @@
   "total_documents_processed": 12,
   "processing_summary": {},
   "extraction_types_found": [
-    "personalData",
-    "tabularData"
+    "tabularData",
+    "personalData"
   ],
   "average_confidence_by_type": {
-    "personalData": 0.4333333333333334,
+    "personalData": 0.445,
     "tabularData": 0.9313888888888889
   },
   "document_summaries": {
@@ -14,7 +14,7 @@
       "total_extractors": 0,
       "successful_extractors": 0,
       "failed_extractors": 0,
-      "processing_time": 9.2e-05,
+      "processing_time": 0.000104,
       "extraction_types_found": [],
       "average_confidence": 0.0
     },
@@ -22,7 +22,7 @@
       "total_extractors": 2,
       "successful_extractors": 2,
       "failed_extractors": 0,
-      "processing_time": 5.728719,
+      "processing_time": 5.80038,
       "extraction_types_found": [
         "personalData",
         "tabularData"
@@ -33,7 +33,7 @@
       "total_extractors": 2,
       "successful_extractors": 2,
       "failed_extractors": 0,
-      "processing_time": 4.318633,
+      "processing_time": 3.999371,
       "extraction_types_found": [
         "personalData",
         "tabularData"
@@ -44,7 +44,7 @@
       "total_extractors": 0,
       "successful_extractors": 0,
       "failed_extractors": 0,
-      "processing_time": 0.002333,
+      "processing_time": 0.002936,
       "extraction_types_found": [],
       "average_confidence": 0.0
     },
@@ -52,7 +52,7 @@
       "total_extractors": 2,
       "successful_extractors": 2,
       "failed_extractors": 0,
-      "processing_time": 5.995806,
+      "processing_time": 6.20805,
       "extraction_types_found": [
         "personalData",
         "tabularData"
@@ -63,7 +63,7 @@
       "total_extractors": 1,
       "successful_extractors": 1,
       "failed_extractors": 0,
-      "processing_time": 2.709237,
+      "processing_time": 3.057144,
       "extraction_types_found": [
         "personalData"
       ],
@@ -73,7 +73,7 @@
       "total_extractors": 2,
       "successful_extractors": 2,
       "failed_extractors": 0,
-      "processing_time": 4.66104,
+      "processing_time": 4.220932,
       "extraction_types_found": [
         "personalData",
         "tabularData"
@@ -84,7 +84,7 @@
       "total_extractors": 2,
       "successful_extractors": 2,
       "failed_extractors": 0,
-      "processing_time": 9.388691,
+      "processing_time": 8.188239,
       "extraction_types_found": [
         "personalData",
         "tabularData"
@@ -95,7 +95,7 @@
       "total_extractors": 1,
       "successful_extractors": 1,
       "failed_extractors": 0,
-      "processing_time": 2.053475,
+      "processing_time": 1.990021,
       "extraction_types_found": [
         "personalData"
       ],
@@ -105,18 +105,18 @@
       "total_extractors": 2,
       "successful_extractors": 2,
       "failed_extractors": 0,
-      "processing_time": 6.557828,
+      "processing_time": 5.609451,
       "extraction_types_found": [
         "personalData",
         "tabularData"
       ],
-      "average_confidence": 0.6041666666666667
+      "average_confidence": 0.6625
     },
     "Bank Statement 2.pdf": {
       "total_extractors": 1,
       "successful_extractors": 1,
       "failed_extractors": 0,
-      "processing_time": 3.296858,
+      "processing_time": 2.533715,
       "extraction_types_found": [
         "personalData"
       ],
@@ -126,12 +126,12 @@
       "total_extractors": 1,
       "successful_extractors": 1,
       "failed_extractors": 0,
-      "processing_time": 3.714869,
+      "processing_time": 2.93818,
       "extraction_types_found": [
         "personalData"
       ],
       "average_confidence": 0.2916666666666667
     }
   },
-  "overall_average_confidence": 0.6201041666666667
+  "overall_average_confidence": 0.6273958333333334
 }
