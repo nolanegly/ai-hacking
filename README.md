@@ -304,6 +304,83 @@ src/
 │   │   ├── document_processor.py       # Document reading utilities
 │   │   └── output_manager.py           # Output handling
 │   └── tools/                          # Agent tools directory
+├── website/
+│   ├── public/
+│   │   ├── index.html            # Web interface for viewing aggregation data
+│   │   └── script.js             # Frontend JavaScript for interactive display
+│   ├── server.js                 # Node.js Express server
+│   └── data/                     # Symlink to aggregation output files
+```
+
+## Web Interface
+
+The project includes a web-based interface for viewing and analyzing personal data aggregation results. This interface provides an interactive way to explore the data extracted from documents and identify inconsistencies across multiple files.
+
+### Features
+
+- **Interactive Dropdowns**: Select personal data fields to view all found values
+- **Occurrence Sorting**: Values are sorted by frequency and then alphabetically
+- **File Source Tracking**: See which documents contain each value with confidence scores
+- **Clickable File Links**: Direct links to open original source documents
+- **Responsive Design**: Clean, modern interface optimized for data exploration
+
+### Setup
+
+1. **Start the web server**:
+```bash
+cd src/website
+node server.js
+```
+
+2. **Access the interface**: Open http://localhost:3000 in your browser
+
+### Requirements
+
+- Node.js and npm
+- Express.js (install with `npm install express`)
+
+### Usage
+
+1. **Generate aggregation data**:
+```bash
+python3 main.py --input-dir data/input --aggregate
+```
+
+2. **Start the web server** (from the `src/website` directory):
+```bash
+node server.js
+```
+
+3. **Explore the data**:
+   - Use dropdowns to select different personal data fields
+   - View all found values sorted by occurrence frequency
+   - Click on values to see which files contain them
+   - Click on file names to open the original documents
+
+### File Opening Feature
+
+The web interface includes a file opening feature that allows you to click on file names to open the original documents:
+
+- **Cross-platform support**: Works on Windows, macOS, and Linux
+- **Default application**: Opens files with the system's default application
+- **Error handling**: Provides feedback if files cannot be opened
+- **Security**: Only opens files within the designated data directories
+
+### API Endpoints
+
+- `GET /`: Main web interface
+- `GET /data/personal_data_aggregation.json`: Aggregation data endpoint
+- `POST /open-file`: Opens files using Node.js (file path in request body)
+
+### File Structure
+
+```
+src/website/
+├── public/
+│   ├── index.html        # Main interface with embedded CSS
+│   └── script.js         # Frontend logic and file interaction
+├── server.js             # Express server with file opening capability
+└── data/                 # Link to aggregation output files
 ```
 
 ## Adding Custom Extractors
