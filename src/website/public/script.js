@@ -52,6 +52,10 @@ class PersonalDataViewer {
         const fieldWrapper = document.createElement('div');
         fieldWrapper.className = 'field-wrapper';
 
+        // Create dropdown section (left side)
+        const dropdownSection = document.createElement('div');
+        dropdownSection.className = 'dropdown-section';
+
         // Create label
         const label = document.createElement('label');
         label.textContent = `${this.formatFieldName(fieldName)} (sorted by occurrence):`;
@@ -78,13 +82,21 @@ class PersonalDataViewer {
             select.appendChild(option);
         });
 
+        // Create selection section (right side)
+        const selectionSection = document.createElement('div');
+        selectionSection.className = 'selection-section';
+        selectionSection.id = `${fieldName}-selection-info`;
+
         // Add event listener
         select.addEventListener('change', (e) => {
             this.handleSelection(fieldName, e.target.value);
         });
 
-        fieldWrapper.appendChild(label);
-        fieldWrapper.appendChild(select);
+        dropdownSection.appendChild(label);
+        dropdownSection.appendChild(select);
+
+        fieldWrapper.appendChild(dropdownSection);
+        fieldWrapper.appendChild(selectionSection);
         container.appendChild(fieldWrapper);
     }
 
@@ -136,7 +148,7 @@ class PersonalDataViewer {
 
     handleSelection(fieldName, selectedValue) {
         if (!selectedValue) {
-            this.clearSelectionInfo();
+            this.clearSelectionInfo(fieldName);
             return;
         }
 
@@ -149,7 +161,7 @@ class PersonalDataViewer {
     }
 
     displaySelectionInfo(item, fieldName) {
-        const infoContainer = document.getElementById('selection-info');
+        const infoContainer = document.getElementById(`${fieldName}-selection-info`);
         if (!infoContainer) return;
 
         const fileList = item.instances.map(instance =>
@@ -160,7 +172,7 @@ class PersonalDataViewer {
 
         infoContainer.innerHTML = `
             <div class="selection-details">
-                <h4>Selected ${this.formatFieldName(fieldName)}: ${item.value}</h4>
+                <h5>${item.value}</h5>
                 <p><strong>${occurrenceText}:</strong> ${item.occurrences}</p>
                 <p><strong>Weighted Score:</strong> ${item.weightedScore}</p>
                 <p><strong>Found in files:</strong></p>
@@ -169,8 +181,8 @@ class PersonalDataViewer {
         `;
     }
 
-    clearSelectionInfo() {
-        const infoContainer = document.getElementById('selection-info');
+    clearSelectionInfo(fieldName) {
+        const infoContainer = document.getElementById(`${fieldName}-selection-info`);
         if (infoContainer) {
             infoContainer.innerHTML = '';
         }

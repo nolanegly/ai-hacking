@@ -57,6 +57,19 @@
             margin-top: 0;
             color: #007bff;
         }
+        .selection-details h5 {
+            margin-top: 0;
+            margin-bottom: 10px;
+            color: #007bff;
+            font-size: 1.1em;
+        }
+        .selection-details {
+            font-size: 0.9em;
+        }
+        .selection-details ul {
+            font-size: 0.85em;
+            margin-left: 15px;
+        }
         .error {
             background-color: #f8d7da;
             color: #721c24;
@@ -73,11 +86,42 @@
             margin-bottom: 5px;
             color: #555;
         }
-        #dropdowns-container {
+        .main-layout {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            margin-bottom: 30px;
+            grid-template-columns: 1fr 2fr;
+            gap: 30px;
+            margin-top: 20px;
+        }
+        .dropdowns-column {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            height: fit-content;
+        }
+        .selections-column {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #dee2e6;
+        }
+        .field-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            align-items: start;
+            margin-bottom: 25px;
+            padding: 15px;
+            background-color: white;
+            border-radius: 5px;
+            border: 1px solid #dee2e6;
+        }
+        .dropdown-section {
+            display: flex;
+            flex-direction: column;
+        }
+        .selection-section {
+            display: flex;
+            flex-direction: column;
         }
     </style>
 </head>
@@ -102,8 +146,6 @@
             <div id="error-container"></div>
 
             <div id="dropdowns-container"></div>
-
-            <div id="selection-info"></div>
         </div>
     </div>
 
