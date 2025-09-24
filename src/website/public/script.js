@@ -99,9 +99,38 @@ class PersonalDataViewer {
             if (b.occurrences !== a.occurrences) {
                 return b.occurrences - a.occurrences;
             }
-            // If occurrences are equal, sort alphabetically (ascending)
+
+            // If occurrences are equal, check if values are numeric
+            const aIsNumeric = this.isNumericValue(a.value);
+            const bIsNumeric = this.isNumericValue(b.value);
+
+            // If both are numeric, sort by numeric value (descending)
+            if (aIsNumeric && bIsNumeric) {
+                const aNum = this.extractNumericValue(a.value);
+                const bNum = this.extractNumericValue(b.value);
+                return bNum - aNum;
+            }
+
+            // If occurrences are equal and not both numeric, sort alphabetically (ascending)
             return a.value.localeCompare(b.value);
         });
+    }
+
+    isNumericValue(value) {
+        // Check for currency values like $1,500.00 or $95,000
+        if (value.match(/^\$[\d,]+(\.\d{2})?$/)) {
+            return true;
+        }
+
+        // Check for plain numbers
+        const numericValue = parseFloat(value.replace(/[,$]/g, ''));
+        return !isNaN(numericValue) && isFinite(numericValue);
+    }
+
+    extractNumericValue(value) {
+        // Remove currency symbols, commas, and extract numeric value
+        const cleanValue = value.replace(/[,$]/g, '');
+        return parseFloat(cleanValue);
     }
 
     handleSelection(fieldName, selectedValue) {
