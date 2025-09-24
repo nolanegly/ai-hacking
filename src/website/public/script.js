@@ -165,7 +165,7 @@ class PersonalDataViewer {
         if (!infoContainer) return;
 
         const fileList = item.instances.map(instance =>
-            `<li>${instance.file} (confidence: ${instance.confidence})</li>`
+            `<li><a href="#" onclick="openFile('${instance.file}')" class="file-link">${instance.file}</a> (confidence: ${instance.confidence})</li>`
         ).join('');
 
         const occurrenceText = item.occurrences === 1 ? 'Occurrence' : 'Occurrences';
@@ -196,6 +196,32 @@ class PersonalDataViewer {
             console.error(message);
         }
     }
+}
+
+// Function to open file using Node.js
+function openFile(filename) {
+    const filePath = `data/input/${filename}`;
+
+    fetch('/open-file', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ filePath: filePath })
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            console.log(`Successfully opened file: ${filename}`);
+        } else {
+            console.error(`Failed to open file: ${data.error}`);
+            alert(`Failed to open file: ${data.error}`);
+        }
+    })
+    .catch(error => {
+        console.error('Error opening file:', error);
+        alert(`Error opening file: ${error.message}`);
+    });
 }
 
 // Initialize when DOM is loaded
