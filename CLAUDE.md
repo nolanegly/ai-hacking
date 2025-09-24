@@ -17,6 +17,11 @@ python3 main.py --input-dir data/input
 
 # Full extraction with aggregation and reports
 python3 main.py --input-dir data/input --summary --aggregate --verbose
+
+# Start web interface (from src/website directory)
+cd src/website
+node server.js
+# Then open http://localhost:3000
 ```
 
 **Testing:**
@@ -93,3 +98,28 @@ The system follows a **Pipeline + Strategy pattern** where:
 - WeightedScore calculation: `occurrences / sum_of_all_occurrences_for_that_field`
 - File output naming includes extension to prevent overwrites: `document_pdf_results.json`
 - The system automatically registers default extractors in pipeline initialization
+
+## Web Interface
+
+The project includes a Node.js web interface at `src/website/` for visualizing personal data aggregation results:
+
+**Key Features:**
+- Interactive dropdowns for exploring personal data fields and values
+- Occurrence-based sorting with confidence scores
+- Clickable file links that open original documents using Node.js
+- Cross-platform file opening (Windows, macOS, Linux)
+- Real-time data loading from `personal_data_aggregation.json`
+
+**Technical Implementation:**
+- **Frontend**: `public/script.js` - PersonalDataViewer class with dropdown management
+- **Backend**: `server.js` - Express server with `/open-file` POST endpoint
+- **File Opening**: Uses `child_process.exec` with platform-specific commands:
+  - Windows: `start "" "${fullPath}"`
+  - macOS: `open "${fullPath}"`
+  - Linux: `xdg-open "${fullPath}"`
+
+**Development Notes:**
+- Requires Node.js and Express (`npm install express`)
+- Files opened from `data/input/` directory (note: user modified path from `data/output/`)
+- Error handling for missing files and unsupported platforms
+- CSS styling embedded in `index.html` with hover effects for file links
