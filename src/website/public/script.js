@@ -73,7 +73,8 @@ class PersonalDataViewer {
         sortedData.forEach(item => {
             const option = document.createElement('option');
             option.value = item.value;
-            option.textContent = `${item.value} (${item.occurrences} occurrences)`;
+            const occurrenceText = item.occurrences === 1 ? 'occurrence' : 'occurrences';
+            option.textContent = `${item.value} (${item.occurrences} ${occurrenceText})`;
             select.appendChild(option);
         });
 
@@ -155,10 +156,12 @@ class PersonalDataViewer {
             `<li>${instance.file} (confidence: ${instance.confidence})</li>`
         ).join('');
 
+        const occurrenceText = item.occurrences === 1 ? 'Occurrence' : 'Occurrences';
+
         infoContainer.innerHTML = `
             <div class="selection-details">
                 <h4>Selected ${this.formatFieldName(fieldName)}: ${item.value}</h4>
-                <p><strong>Occurrences:</strong> ${item.occurrences}</p>
+                <p><strong>${occurrenceText}:</strong> ${item.occurrences}</p>
                 <p><strong>Weighted Score:</strong> ${item.weightedScore}</p>
                 <p><strong>Found in files:</strong></p>
                 <ul>${fileList}</ul>
