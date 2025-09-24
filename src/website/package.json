@@ -1,0 +1,14 @@
+{
+  "name": "ai-hacking-website",
+  "version": "1.0.0",
+  "description": "Simple HTML website for AI hacking project",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "author": "",
+  "license": "ISC"
+}

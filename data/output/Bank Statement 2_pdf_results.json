@@ -1,0 +1,45 @@
+{
+  "extraction_summary": {
+    "total_files_processed": 1,
+    "processed_at": "2025-09-24T10:14:28.317555",
+    "extraction_types": [
+      "personalData",
+      "extraction_metadata"
+    ]
+  },
+  "personalData": [
+    {
+      "firstName": "Jane",
+      "confidence": 0.9
+    },
+    {
+      "lastName": "Smith",
+      "confidence": 0.9
+    },
+    {
+      "phoneNumber": "(555) 987-6543",
+      "confidence": 0.8
+    },
+    {
+      "homeAddress": "456 Elm St, Other town, USA 67890",
+      "confidence": 0.8
+    }
+  ],
+  "extraction_metadata": {
+    "filename": "Bank Statement 2.pdf",
+    "processed_at": "2025-09-24T10:13:55.471588",
+    "extractors_run": [
+      {
+        "name": "personal_data_extractor",
+        "type": "personal_data",
+        "success": true,
+        "processing_time": 2.936816,
+        "confidence": 0.2833333333333334
+      }
+    ],
+    "total_processing_time": 2.939328,
+    "success_count": 1,
+    "error_count": 0,
+    "completed_at": "2025-09-24T10:13:58.410923"
+  }
+}

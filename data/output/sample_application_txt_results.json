@@ -1,0 +1,77 @@
+{
+  "extraction_summary": {
+    "total_files_processed": 1,
+    "processed_at": "2025-09-24T10:14:28.328044",
+    "extraction_types": [
+      "personalData",
+      "extraction_metadata"
+    ]
+  },
+  "personalData": [
+    {
+      "firstName": "John",
+      "confidence": 0.9
+    },
+    {
+      "lastName": "Smith",
+      "confidence": 0.9
+    },
+    {
+      "middleName": "M",
+      "confidence": 0.8
+    },
+    {
+      "dateOfBirth": "03/15/1985",
+      "confidence": 0.9
+    },
+    {
+      "socialSecurityNumber": "123-45-6789",
+      "confidence": 0.9
+    },
+    {
+      "phoneNumber": "(555) 123-4567",
+      "confidence": 0.9
+    },
+    {
+      "emailAddress": "john.smith@email.com",
+      "confidence": 0.9
+    },
+    {
+      "homeAddress": "123 Main Street, Anytown, NY 12345",
+      "confidence": 0.9
+    },
+    {
+      "employmentStatus": "Full-time employed",
+      "confidence": 0.9
+    },
+    {
+      "annualIncome": "$75,000",
+      "confidence": 0.9
+    },
+    {
+      "employerName": "ABC Corporation",
+      "confidence": 0.9
+    },
+    {
+      "jobTitle": "Software Engineer",
+      "confidence": 0.9
+    }
+  ],
+  "extraction_metadata": {
+    "filename": "sample_application.txt",
+    "processed_at": "2025-09-24T10:14:25.101714",
+    "extractors_run": [
+      {
+        "name": "personal_data_extractor",
+        "type": "personal_data",
+        "success": true,
+        "processing_time": 3.203203,
+        "confidence": 0.8916666666666667
+      }
+    ],
+    "total_processing_time": 3.209046,
+    "success_count": 1,
+    "error_count": 0,
+    "completed_at": "2025-09-24T10:14:28.310767"
+  }
+}
